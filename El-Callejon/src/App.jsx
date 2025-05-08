@@ -1,4 +1,4 @@
-import Login from '../../pages/Admin-Login/Login.jsx'
+import Login from '../pages/Admin-Login/Login.jsx'
 
 function App() {
   
