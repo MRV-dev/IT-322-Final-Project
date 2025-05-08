@@ -27,37 +27,32 @@ body{
   margin-left: 29%;
 }
 
+
 .Login-Text{
  margin-left: 30%;
  font-family: Segoe UI;
  font-size: 46px;
- font-weight: normal;
+ font-weight: 500;
 }
 
+
+
 .username{
-  height: 24px;
-  width: 93%;
   font-family: Segoe UI;
-  font-size: 18px;
   padding-left: 10px;
   border-radius: 9px;
   border-style: solid;
   padding: 16px;
   border-width: 1px;
-  border-color: rgb(113, 113, 113);
   margin-bottom: 18px;
 }
 .password{
-  height: 24px;
-  width: 93%;
   font-family: Segoe UI;
-  font-size: 18px;
   padding-left: 10px;
   padding: 16px;
   border-radius: 9px;
-  border-style: solid;
+  border: solid;
   border-width: 1px;
-  border-color: rgb(113, 113, 113);
   display: block;
   margin-bottom: 60px;
 }
@@ -65,6 +60,19 @@ body{
   position: relative;
   width: 100%;
 }
+.username, .password {
+  outline: none;
+  border-color: rgb(194, 193, 193);
+  font-size: 23px;
+  height: 28px;
+  width: 93%;
+}
+.username::placeholder,
+.password::placeholder{
+  color: rgb(179, 179, 179);
+}
+
+
 
 .eye-icon{
   position: absolute;
@@ -75,8 +83,6 @@ body{
   cursor: pointer;
   color: #888;
 }
-
-
 
 .nav-to-customer{
   font-family: Segoe UI;
@@ -89,13 +95,15 @@ body{
   text-decoration: underline;
 }
 
-.Login{
+
+
+.btn-Login{
   margin-top: 8px;
-  width: 466px;
-  height: 50px;
+  width: 480px;
+  height: 55px;
   color: white;
   font-family: Segoe UI;
-  font-size: 23px;
+  font-size: 27px;
   font-weight: bold;
   padding-left: 9px;
   border-radius: 9px;
@@ -111,13 +119,6 @@ body{
   text-decoration: none;
 }
 
-.username, .password {
-  outline: none;
-}
-
-.logo-img{
-
-}
 
 .container{       
   display: flex;
