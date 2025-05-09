@@ -5,6 +5,8 @@
 }
 
 
+
+
 /* LOGIN STYLE */
 body{
   background-color: #ECECEC;
@@ -12,36 +14,35 @@ body{
 
 .logo-row{
   margin-bottom: 2%;
-  margin-top: 2%;
-  
+  margin-top: 4%;
   display: flex;
   justify-content: center;
   align-items: center;  
 }
 .logo{
   border-radius: 100%;
-  height: 200px;
+  height: 170px;
 }
 
 .Admin-Login{
   background-color: white;
-  max-width: 42%;
-  height: 400px;
-  padding-bottom: 40px;
+  max-width: 600px;
+  width: 100%;
+  padding-bottom: 3%;
   border-radius: 40px;
   display: flex;
   justify-content: center;
   align-items: center;   
-  margin-left: 29%;
+  margin-left: 30%;
 }
 
-
 .Login-Text{
- margin-left: 30%;
+ margin-left: 14%;
  font-family: Segoe UI;
- font-size: 46px;
+ font-size: 44px;
  font-weight: 500;
- margin-bottom: 19%;
+ margin-top: 6%;
+ margin-bottom: 10%;
 }
 
 
@@ -51,7 +52,6 @@ body{
   padding-left: 10px;
   border-radius: 9px;
   border-style: solid;
-  padding: 16px;
   border-width: 1px;
   margin-bottom: 18px;
   margin-top: -70px;
@@ -59,7 +59,6 @@ body{
 .password{
   font-family: Segoe UI;
   padding-left: 10px;
-  padding: 16px;
   border-radius: 9px;
   border: solid;
   border-width: 1px;
@@ -74,8 +73,12 @@ body{
   outline: none;
   border-color: rgb(194, 193, 193);
   font-size: 21px;
+  padding: 9%;
+  margin-left: -40%;
   height: 50px;
-  width: 100%;
+  width: 180%;
+  max-width: 1250px;
+  margin-top: 1px;
 }
 .username::placeholder,
 .password::placeholder{
@@ -83,10 +86,9 @@ body{
 }
 
 
-
 .eye-icon{
   position: absolute;
-  right: 20px;
+  right: -30%;
   top: 28%;
   font-size: 24px;
   transform: translateY(-50%);
@@ -97,7 +99,7 @@ body{
 .nav-to-customer{
   font-family: Segoe UI;
   font-size: 16px;
-  margin-left: 85%;
+  margin-left: 110%;
   color: black;
   text-decoration: none;
 }
@@ -109,7 +111,7 @@ body{
 
 .btn-Login{
   margin-bottom: -2%;
-  width: 480px;
+  width: 180%;
   height: 50px;
   color: white;
   font-family: Segoe UI;
@@ -124,6 +126,7 @@ body{
   cursor: pointer;
   background-color: #EFCA6C;
   border: none;
+  margin-left: -40%;
 }
 .link{
   text-decoration: none;
@@ -142,8 +145,8 @@ body{
 
 .Dashboard-page{
   position: absolute;
-  width: 1536px;
-  height: 742px;
+  width: 100%;
+  height: 100%;
   background-color: #EFE5CB;
 }
 
@@ -151,15 +154,15 @@ body{
   position: absolute;
   border-radius: 60%;
   height: 12%;
-  margin-left: 17px;
+  margin-left: 13px;
   margin-top: 20px;
 }
 
 .side-bar{
   margin-top: 9px;
   margin-left: 16px;
-  width: 8%;
-  height: 720px;
+  width: 7.3%;
+  height: 98%;
   background-color:  #EFCA6C;
 }
 .List{
@@ -172,9 +175,9 @@ body{
 }
 .navbar{
   position: absolute;
-  margin-left: 9%;
-  width: 89%;
-  height: 83px;
+  margin-left: 8%;
+  width: 90%;
+  height: 9%;
   background-color:  #EFCA6C;
 }
 .Dashboard-text{
@@ -221,3 +224,48 @@ body{
 /* Reports */
 /* Online Orders */
 /* Settings */
+
+/* Desktop size */
+/* @media (min-width: 991px){
+  .Admin-Login{
+    max-width: 40%;
+    margin-left: 30%;
+  }
+  .logo{
+    height: 170px;
+  }
+  .username, .password{
+    width: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .Admin-Login{
+    width: 60%;
+  }
+  .username, .password{
+    width: 180%;
+  }
+}
+@media (min-width: 1920px) {
+  .Admin-Login{
+    width: 90%;
+  }
+  .username, .password{
+    width: 180%;
+  }
+}
+
+/* mobile devices (try lang) */
+@media (max-width: 767px) {
+  .Admin-Login {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+} */
+
+
+
