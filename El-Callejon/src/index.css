@@ -1,10 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* LOGIN STYLE */
 body{
   background-color: #ECECEC;
 }
 
 .logo-row{
   margin-bottom: 2%;
-  margin-top: 5%;
+  margin-top: 2%;
   
   display: flex;
   justify-content: center;
@@ -18,7 +24,7 @@ body{
 .Admin-Login{
   background-color: white;
   max-width: 42%;
-  height: 430px;
+  height: 400px;
   padding-bottom: 40px;
   border-radius: 40px;
   display: flex;
@@ -33,6 +39,7 @@ body{
  font-family: Segoe UI;
  font-size: 46px;
  font-weight: 500;
+ margin-bottom: 19%;
 }
 
 
@@ -45,6 +52,7 @@ body{
   padding: 16px;
   border-width: 1px;
   margin-bottom: 18px;
+  margin-top: -70px;
 }
 .password{
   font-family: Segoe UI;
@@ -54,7 +62,7 @@ body{
   border: solid;
   border-width: 1px;
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 .password-wrapper{
   position: relative;
@@ -63,9 +71,9 @@ body{
 .username, .password {
   outline: none;
   border-color: rgb(194, 193, 193);
-  font-size: 23px;
-  height: 28px;
-  width: 93%;
+  font-size: 21px;
+  height: 50px;
+  width: 100%;
 }
 .username::placeholder,
 .password::placeholder{
@@ -98,12 +106,12 @@ body{
 
 
 .btn-Login{
-  margin-top: 8px;
+  margin-bottom: -2%;
   width: 480px;
-  height: 55px;
+  height: 50px;
   color: white;
   font-family: Segoe UI;
-  font-size: 27px;
+  font-size: 24px;
   font-weight: bold;
   padding-left: 9px;
   border-radius: 9px;
@@ -123,4 +131,46 @@ body{
 .container{       
   display: flex;
   flex-direction: column;
+}
+
+
+/* DASHBOARD */
+
+.Dashboard-page{
+  position: absolute;
+  width: 1536px;
+  height: 742px;
+  background-color: #EFE5CB;
+}
+
+.Logo-Admin{
+  position: absolute;
+  border-radius: 60%;
+  height: 14%;
+  margin-left: 17px;
+  margin-top: 20px;
+}
+
+.side-bar{
+  margin-top: 9px;
+  margin-left: 16px;
+  width: 9%;
+  height: 720px;
+  background-color:  #EFCA6C;
+}
+.navbar{
+  position: absolute;
+  margin-left: 10%;
+  width: 88%;
+  height: 95px;
+  background-color:  #EFCA6C;
+}
+.Dashboard-text{
+  font-family: Segoe UI;
+  margin-left: 10%;
+  margin-top: 24px;
+
+}
+.side-bar, .navbar{
+  border-radius: 20px;
 }
