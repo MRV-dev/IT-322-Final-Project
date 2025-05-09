@@ -194,7 +194,7 @@ body{
   width: 60%;
   height: 55px;
   margin-left: 154px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 .notif-box{
   justify-content: center;
@@ -202,7 +202,7 @@ body{
   width: 144%;
   height: 55px;
   margin-left: 8px;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 .notif{
   position: absolute;

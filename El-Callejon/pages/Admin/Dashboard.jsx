@@ -14,6 +14,7 @@ function Dashboard() {
             <li className='navigations'>awdawd</li>
             <li className='navigations'>awda</li>
             <li className='navigations'>awdawd</li>
+            <hr className='line'/>
           </ul>
           <div className="navbar">
             <h1 className='Dashboard-text'>DASHBOARD</h1>
@@ -26,6 +27,10 @@ function Dashboard() {
                 </div>
               </Link> 
             </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
             
           <div></div>
