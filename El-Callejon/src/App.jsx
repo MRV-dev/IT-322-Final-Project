@@ -1,28 +1,24 @@
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Login from '../pages/Admin/Login.jsx'
-import POS from '../pages/Admin/POS.jsx'
-import Dashboard from '../pages/Admin/Dashboard.jsx'
-import OnlineOrders from '../pages/Admin/OnlineOrders.jsx'
-import Reports from '../pages/Admin/Reports.jsx'
-import Settings from '../pages/Admin/Settings.jsx'
-
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Orders from './pages/orders/OrdersPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/Login" element={<Login/>}/>
-          <Route path="/POS" element={<POS/>}/>
-          <Route path="/Dashboard" element={<Dashboard/>}/>
-          <Route path="/Reports" element={<Reports/>}/>
-          <Route path="/Settings" element={<Settings/>}/>
-          <Route path="/Online-Orders" element={<OnlineOrders/>}/>
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <div className="app-container">
+      <Routes>
+        {/* Redirect from / to /dashboard */}
+        <Route path="/" element={<Navigate to="/orders" />} />
+
+        {/* Main routes */}
+        <Route path="/orders" element={<Orders />} />
+
+
+        {/* 404 fallback route */}
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
