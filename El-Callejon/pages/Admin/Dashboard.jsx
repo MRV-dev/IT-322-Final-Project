@@ -1,5 +1,26 @@
 import {Link} from 'react-router-dom'
 import logoAdmin from '../assets/El_Calejon.jpg'
+import '../Admin/Dashboard.css'
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from 'recharts';
+
+const data = [
+  { name: 'Mon', sales: 400 },
+  { name: 'Tue', sales: 300 },
+  { name: 'Wed', sales: 500 },
+  { name: 'Thu', sales: 700 },
+  { name: 'Fri', sales: 600 },
+  { name: 'Sat', sales: 800 },
+  { name: 'Sun', sales: 750 },
+];
+
 
 function Dashboard() {
   return(
@@ -52,6 +73,17 @@ function Dashboard() {
                   <p className='peak-sales-text'>Peak Sales Hour</p>
                   <h2 className='peak-sales'>12PM</h2>
                 </div>
+              </div>
+              <div className='LineChart' style={{ width: '67.5%', height: 300, marginTop: '10px' }}>
+                <ResponsiveContainer>
+                  <LineChart data={data} margin={{ top: 50, right: 30, left: 0, bottom: 0 }}>
+                    {/* <CartesianGrid strokeDasharray="0" /> */}
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Line type="Linear" dataKey="sales" stroke="#007bff" strokeWidth={2.4} />
+                  </LineChart>
+                </ResponsiveContainer>
               </div>
             </div>
           </div>

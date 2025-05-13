@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaEye, FaSearch, FaFileAlt, FaTimes } from 'react-icons/fa';
 import './Orders.css';
 
@@ -42,7 +42,7 @@ const OrdersPage = () => {
   const getTotal = (items) => items.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="d-flex">
+    <div className="d-flex ">
       {/* Sidebar */}
       <div className="sidebar p-3">
         <div className="logo-circle mb-3">
