@@ -24,6 +24,28 @@
   background-color: #EFCA6C;
   border-radius: 8px;
 }
+.btn-nav {
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: 8vh;
+  width: 4.5vw;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-nav:active{
+  background-color: #FFE95D;
+}
+.navigations{
+  list-style-type: none;
+  
+}
+.List{
+  margin-top: 40px;
+  margin-left: -32px;
+}
+
+
 
 .part{
   max-width: 100vw;
@@ -51,8 +73,12 @@
   height: 100vh;
   padding-left: 1.6%;
   overflow-y: auto;
-  background-color: #0077FF;
   
+}
+
+.Dashboard-text{
+  font-family: Segoe UI;
+  margin-left: 120px;
 }
 
 .notif-position{
@@ -64,9 +90,9 @@
 .overview-container {
   flex: 1;
   width: 100%;
-  height: 84vh;
+  height: 86.6vh;
   padding: 20px;
-  background-color: #dfdfdf;
+  
   border-radius: 8px;
   margin-top: 1px;
   overflow-y: hidden;
@@ -114,10 +140,29 @@
 }
 
 
+.dashboard-top-section{
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: flex-start;
+}
+.left-side{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.right-side{
+   flex: 1;
+}
+
 .summary-cards {
   display: flex;
-  gap: 10px;
-  margin-top: 80px;
+  gap: 20px;
+  margin-top: 50px;
+  font-family: Segoe UI;
+  height: 90px;
 }
 
 .total-sales-today,
@@ -130,11 +175,11 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   background-color: #FFF9E5;
   border-radius: 10px;
-  width: 22%;
-  height: 80px;
+  width: 40%;
   text-align: center;
   line-height: 2px;
   padding-top: 20px;
+  margin-left: 3px;
 }
 
 .total-sales-text, 
@@ -147,4 +192,143 @@
 .LineChart{
   background-color: white;
   border-radius: 6px;
+  margin-left: 3px;
 }
+
+.dashboard-top-section {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.left-side {
+  flex: 2;
+  min-width: 0;
+}
+
+.best-selling-text{
+  font-family: Segoe UI;
+  padding: 15px;
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.Best-Selling{
+  flex: 1;
+  background-color: #ffffff;
+  width: 25.4rem;
+  height: 58.6vh;
+  border-radius: 7px;
+  margin-left: 22px;
+  top: 25.3%;
+  margin-top: 49.7px;
+}
+
+.Best-selling-List{
+  padding-top: 1px;
+  padding-left: 40px;
+  line-height: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Sold-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+  font-family: Segoe UI;
+}
+
+.Lomi, .Palabok, .Tapsilog, .Bihon{
+  height: 55px;
+}
+.Palabok{
+  height: 38px;
+  padding-left: 10px;
+  margin-top: -14px;
+}
+.Tapsilog{
+  padding-left: 7px;
+  height: 52px;
+  margin-top: -16px;
+}
+.Bihon{
+  height: 43px;
+  margin-top: -16px;
+  padding-left: 13px;
+}
+
+.Dish-name1, .Dish-name2, 
+.Dish-name3, .Dish-name4{
+  padding-left: 37px;
+}
+.Dish-name2, .Dish-name4{
+  padding-left: 43px;
+}
+.Dish-name1, .Dish-name2, .Dish-name3, .Dish-name4{
+  font-size: 17px;
+}
+
+.dashboard-table {
+  margin-top: 30px;
+  background: #faf9f7;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.recent-orders-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.recent-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.recent-orders-table thead th {
+  background-color: #b3b3b3;
+  color: #fff;
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.recent-orders-table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.recent-orders-table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.recent-orders-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 15px;
+}
+
+.recent-orders-table tr:last-child td {
+  border-bottom: none;
+}
+
+.status-completed {
+  color: green;
+  font-weight: 500;
+}
+
+.status-delivered {
+  color: #007bff;
+  font-weight: 500;
+}
+
+
+
