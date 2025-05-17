@@ -39,9 +39,8 @@ function OnlineOrders() {
             
             <hr className='line'/>
             
-            <Link to="/Logout"
-              className={pathname === '/Logout' ? 'Logout-active' : 'nav'}>
-                <FaThLarge style={{ marginLeft: '13px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
+            <Link to="/Login">
+                <FaThLarge style={{ marginLeft: '-1px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
           </ul>
         </div>
           
@@ -59,10 +58,12 @@ function OnlineOrders() {
                 <table className="recent-orders-table">
                   <thead>
                     <tr>
-                      <th>Date and Time</th>
-                      <th>Order Type</th>
-                      <th>Item</th>
-                      <th>Total</th>
+                      <th>Order ID</th>
+                      <th>Order Placed</th>
+                      <th>Customer Name</th>
+                      <th>Order Method</th>
+                      <th>Order Details</th>
+                      <th>Payment Method</th>
                       <th>Status</th>
                     </tr>
                   </thead>

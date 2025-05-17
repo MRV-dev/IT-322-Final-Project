@@ -100,7 +100,7 @@
 
 .total-sales-today,
 .total-orders-today,
-.peak-sales-hour {
+.Revenue {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,11 +116,20 @@
 }
 
 .total-sales-text, 
-.total-orders-text, 
-.peak-sales-text{
+.total-orders-text {
   font-size: 13px;
   font-weight: 700;
 }
+.Revenue-text{
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.total-sales, .total-orders, .Revenues{
+  color: #0077FF;
+}
+
+
 
 .LineChart{
   background-color: white;

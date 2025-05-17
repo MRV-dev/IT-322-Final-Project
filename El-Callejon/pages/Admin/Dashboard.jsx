@@ -63,9 +63,8 @@ function Dashboard() {
             
             <hr className='line'/>
             
-            <Link to="/Logout"
-              className={pathname === '/Logout' ? 'Logout-active' : 'nav'}>
-                <FaThLarge style={{ marginLeft: '13px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
+            <Link to="/Login">
+                <FaThLarge style={{ marginLeft: '-1px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
           </ul>
         </div>
           
@@ -101,9 +100,9 @@ function Dashboard() {
                       <p className='total-orders-text'>Total Orders Today</p>
                       <h2 className='total-orders'>55</h2>
                     </div>
-                    <div className='peak-sales-hour'>
-                      <p className='peak-sales-text'>Peak Sales Hour</p>
-                      <h2 className='peak-sales'>12PM</h2>
+                    <div className='Revenue'>
+                      <p className='Revenue-text'>Revenue</p>
+                      <h2 className='Revenues'>₱42,000</h2>
                     </div>
                   </div>
 
@@ -119,6 +118,7 @@ function Dashboard() {
                     </ResponsiveContainer>
                   </div>
                 </div>
+                
                 <div className='right-side'>
                   <div className='Best-Selling'>
                     <h6 className='best-selling-text'>Best Selling</h6>

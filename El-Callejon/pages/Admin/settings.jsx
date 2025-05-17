@@ -39,9 +39,8 @@ function Settings() {
             
             <hr className='line'/>
             
-            <Link to="/Logout"
-              className={pathname === '/Logout' ? 'Logout-active' : 'nav'}>
-                <FaThLarge style={{ marginLeft: '13px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
+            <Link to="/Login">
+                <FaThLarge style={{ marginLeft: '-1px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
           </ul>
         </div>
           
