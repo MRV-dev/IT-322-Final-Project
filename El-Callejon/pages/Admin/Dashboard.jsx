@@ -39,34 +39,35 @@ function Dashboard() {
           <img className="Logo-Admin" src={logoAdmin} />
           <ul className='List'>
             <li className='navigations'>
-              <button 
+              <a 
               onClick={() => setActiveNav('dashboard')}
-              className={activeNav === 'dashboard' ? 'btn-nav active' : 'btn-nav'}><FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', }} /></button></li>
+              className={activeNav === 'dashboard' ? 'nav active' : 'nav'}>
+                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black'}} /></a></li>
 
             <li className='navigations'>
-              <button 
-              onClick={() => setActiveNav('dashboard')}
-              className={activeNav === 'dashboard' ? 'btn-nav active' : 'btn-nav'}><FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', }} /></button></li>
+              <a 
+              onClick={() => setActiveNav('Reports')}
+              className={activeNav === 'reports' ? 'nav active' : 'nav'}>
+                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black' }} /></a></li>
             
             <li className='navigations'>
-              <button 
-              onClick={() => setActiveNav('dashboard')}
-              className={activeNav === 'dashboard' ? 'btn-nav active' : 'btn-nav'}><FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', }} /></button></li>
+              <a 
+              onClick={() => setActiveNav('Online-Orders')}
+              className={activeNav === 'Online-Orders' ? 'nav active' : 'nav'}>
+                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black'}} /></a></li>
             
             <li className='navigations'>
-              <button 
-              onClick={() => setActiveNav('dashboard')}
-              className={activeNav === 'dashboard' ? 'btn-nav active' : 'btn-nav'}><FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', }} /></button></li>
+              <a
+              onClick={() => setActiveNav('Settings')}
+              className={activeNav === 'Settings' ? 'nav active' : 'nav'}>
+                <FaThLarge style={{ marginLeft: '13px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></a></li>
             
-            <li className='navigations'>
-              <button 
-              onClick={() => setActiveNav('dashboard')}
-              className={activeNav === 'dashboard' ? 'btn-nav active' : 'btn-nav'}><FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', }} /></button></li>
             <hr className='line'/>
             
-            <button 
-              onClick={() => setActiveNav('dashboard')}
-              className={activeNav === 'dashboard' ? 'btn-nav active' : 'btn-nav'}><FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', }} /></button>
+            <a 
+              onClick={() => setActiveNav('Logout')}
+              className={activeNav === 'Logout' ? 'nav active' : 'nav'}>
+                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black'}} /></a>
           </ul>
         </div>
           
@@ -173,7 +174,7 @@ function Dashboard() {
                       <td>₱160</td>
                       <td className="status-delivered">Delivered</td>
                     </tr>
-                    {/* Add more rows if needed */}
+                    {}
                   </tbody>
                 </table>
               </div>

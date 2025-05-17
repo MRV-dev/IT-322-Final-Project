@@ -24,16 +24,17 @@
   background-color: #EFCA6C;
   border-radius: 8px;
 }
-.btn-nav {
+.nav {
   background-color: #ffffff;
   border-radius: 10px;
   margin-bottom: 10px;
   height: 8vh;
+  margin-left: -14px;
   width: 4.5vw;
   border: none;
   transition: background-color 0.3s ease;
 }
-.btn-nav:active{
+.nav:active{
   background-color: #FFE95D;
 }
 .navigations{
@@ -42,7 +43,11 @@
 }
 .List{
   margin-top: 40px;
-  margin-left: -32px;
+  margin-left: -18px;
+}
+.line{
+  margin-left: -21px;
+  margin-right: -8px;
 }
 
 
@@ -103,9 +108,9 @@
   width: 0; 
   height: 0; 
   display: none; 
+
 } 
 .overview-container:hover {
-  scrollbar-width: thin; 
   overflow-y: auto;
 }
 
@@ -274,10 +279,12 @@
 
 .dashboard-table {
   margin-top: 30px;
+  margin-left: 3px;
   background: #faf9f7;
   padding: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  width: 100%;
+  width: 99.2%;
+  border-radius: 7px;
 }
 
 .recent-orders-title {
