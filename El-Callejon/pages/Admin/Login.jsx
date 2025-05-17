@@ -13,20 +13,23 @@ function Login(){
 
   return(
     <>
-      <div className='logo-row'>
-        <img className='logo' src={Logo} alt="" />
-      </div>
-      <div className="Admin-Login">
-        <div className="container">
-          <h2 className='Login-Text'>LomiHub</h2>
-          <input className="username" type="text" placeholder="Username"/>
-          <div className="password-wrapper">
-            <input className="password" type={showPassword ? "text" : 'password'} placeholder="Enter Password"/>
-            <span onClick={togglePasswordVisibility} className="eye-icon">{showPassword ? <FaEyeSlash/> : <FaEye/>}</span>
-          </div>
-          <a className='nav-to-customer' href="">Customer</a>
-          <Link to="/Dashboard" className="link"><button className="btn-Login" >Log In</button></Link> 
-        </div>    
+
+      <div className='logIn-page'>
+        <div className='logo-row'>
+          <img className='logo' src={Logo} alt="" />
+        </div>
+        <div className="Admin-Login">
+          <div className="container">
+            <h2 className='Login-Text'>LomiHub</h2>
+            <input className="username" type="text" placeholder="Username"/>
+            <div className="password-wrapper">
+              <input className="password" type={showPassword ? "text" : 'password'} placeholder="Enter Password"/>
+              <span onClick={togglePasswordVisibility} className="eye-icon">{showPassword ? <FaEyeSlash/> : <FaEye/>}</span>
+            </div>
+            <a className='nav-to-customer' href="">Customer</a>
+            <Link to="/Dashboard" className="link"><button className="btn-Login" >Log In</button></Link> 
+          </div>    
+        </div>
       </div>
     </>
   )

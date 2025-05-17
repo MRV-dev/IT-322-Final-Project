@@ -1,5 +1,5 @@
-import {Link} from 'react-router-dom'
-import { useState } from 'react'
+import {useLocation, Link} from 'react-router-dom'
+// import { useState } from 'react'
 import logoAdmin from '../assets/El_Calejon.jpg'
 import '../Admin/Dashboard.css'
 import { FaThLarge } from 'react-icons/fa';
@@ -31,7 +31,10 @@ const data = [
 
 
 function Dashboard() {
-  const [activeNav, setActiveNav] = useState('dashboard');
+  // const [activeNav, setActiveNav] = useState('dashboard');
+  const location = useLocation();
+  const pathname = location.pathname;
+
   return(
     <>
       <div className="whole-page">
@@ -39,35 +42,30 @@ function Dashboard() {
           <img className="Logo-Admin" src={logoAdmin} />
           <ul className='List'>
             <li className='navigations'>
-              <a 
-              onClick={() => setActiveNav('dashboard')}
-              className={activeNav === 'dashboard' ? 'nav active' : 'nav'}>
-                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black'}} /></a></li>
+              <Link to="/Dashboard"
+              className={`nav ${pathname === '/Dashboard' ? 'dashboard-active' : ''}`}>
+                <FaThLarge className='nav-icons'/></Link> </li>
 
             <li className='navigations'>
-              <a 
-              onClick={() => setActiveNav('Reports')}
-              className={activeNav === 'reports' ? 'nav active' : 'nav'}>
-                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black' }} /></a></li>
+              <Link to="/Reports"
+              className={`nav ${pathname === '/Reports' ? 'reports-active' : ''}`}>
+                <FaThLarge className='nav-icons' /></Link> </li>
             
             <li className='navigations'>
-              <a 
-              onClick={() => setActiveNav('Online-Orders')}
-              className={activeNav === 'Online-Orders' ? 'nav active' : 'nav'}>
-                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black'}} /></a></li>
+              <Link to="/OnlineOrders"
+              className={`nav ${pathname === '/OnlineOrders' ? 'online-orders-active' : ''}`}>
+                <FaThLarge className='nav-icons'/></Link> </li>
             
             <li className='navigations'>
-              <a
-              onClick={() => setActiveNav('Settings')}
-              className={activeNav === 'Settings' ? 'nav active' : 'nav'}>
-                <FaThLarge style={{ marginLeft: '13px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></a></li>
+              <Link to="/Settings"
+              className={`nav ${pathname === '/Settings' ? 'settings-active' : ''}`}>
+                <FaThLarge className='nav-icons'/></Link> </li>
             
             <hr className='line'/>
             
-            <a 
-              onClick={() => setActiveNav('Logout')}
-              className={activeNav === 'Logout' ? 'nav active' : 'nav'}>
-                <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', color: 'black'}} /></a>
+            <Link to="/Logout"
+              className={pathname === '/Logout' ? 'Logout-active' : 'nav'}>
+                <FaThLarge style={{ marginLeft: '13px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
           </ul>
         </div>
           

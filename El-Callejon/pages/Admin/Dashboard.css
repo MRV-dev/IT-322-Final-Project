@@ -12,6 +12,8 @@
   border-radius: 50%;
 }
 
+
+
 .side-bar {
   flex-shrink: 0;
   display: inline-block;
@@ -26,20 +28,46 @@
 }
 .nav {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 10px;
-  height: 8vh;
+  height: 8.5vh;
   margin-left: -14px;
   width: 4.5vw;
   border: none;
-  transition: background-color 0.3s ease;
 }
-.nav:active{
-  background-color: #FFE95D;
+
+
+.nav-icons{
+  margin-left: 13px;
+  margin-top: 8px;
+  height: 43px;
+  width: 43px;
+  color: black;
+}
+
+
+.dashboard-active {
+  background-color: #FFE95D; /* blue */
+}
+
+.reports-active {
+  background-color: #FFE95D; /* green */
+}
+
+.online-orders-active {
+  background-color: #FFE95D; /* yellow */
+}
+
+.settings-active {
+  background-color: #FFE95D; /* cyan */
+}
+
+.logout-active {
+  background-color: #dc3545; /* red */
 }
 .navigations{
   list-style-type: none;
-  
+  margin-top: 25px;
 }
 .List{
   margin-top: 40px;
@@ -107,7 +135,6 @@
 .overview-container::-webkit-scrollbar { 
   width: 0; 
   height: 0; 
-  display: none; 
 
 } 
 .overview-container:hover {
