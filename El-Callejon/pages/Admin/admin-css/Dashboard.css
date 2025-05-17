@@ -1,108 +1,8 @@
 /* Dashboard */
-.whole-page {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: #EFE5CB;
-  overflow: hidden;
-}
-
-.Logo-Admin{
-  height: 10%;
-  border-radius: 50%;
-}
-
-
-
-.side-bar {
-  flex-shrink: 0;
-  display: inline-block;
-  align-items: center;
-  padding: 20px;
-  width: 110px;
-  height: 97vh;
-  margin-left: 10px;
-  margin-top: 10px;
-  background-color: #EFCA6C;
-  border-radius: 8px;
-}
-.nav {
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin-bottom: 10px;
-  height: 8.5vh;
-  margin-left: -14px;
-  width: 4.5vw;
-  border: none;
-}
-
-
-.nav-icons{
-  margin-left: 13px;
-  margin-top: 8px;
-  height: 43px;
-  width: 43px;
-  color: black;
-}
-
-
-.dashboard-active {
-  background-color: #FFE95D; /* blue */
-}
-
-.reports-active {
-  background-color: #FFE95D; /* green */
-}
-
-.online-orders-active {
-  background-color: #FFE95D; /* yellow */
-}
-
-.settings-active {
-  background-color: #FFE95D; /* cyan */
-}
-
-.logout-active {
-  background-color: #dc3545; /* red */
-}
-.navigations{
-  list-style-type: none;
-  margin-top: 25px;
-}
-.List{
-  margin-top: 40px;
-  margin-left: -18px;
-}
-.line{
-  margin-left: -21px;
-  margin-right: -8px;
-}
-
-
-
-.part{
-  max-width: 100vw;
-}
-
-.nav-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar {
-  margin-top: 5px;
-  padding: 10px;
-  width: 86rem;
-  height: 10vh;
-  background-color: #EFCA6C;
-  border-radius: 8px;
-  margin-left: 23px;
-  margin-top: 12px;
-}
 
 .main-content-dashboard {
   flex: 1;
+  margin-top: 12px;
   height: 100vh;
   padding-left: 1.6%;
   overflow-y: auto;
@@ -111,7 +11,8 @@
 
 .Dashboard-text{
   font-family: Segoe UI;
-  margin-left: 120px;
+  margin-left: 12px;
+  margin-top: 10px;
 }
 
 .notif-position{
@@ -125,9 +26,8 @@
   width: 100%;
   height: 86.6vh;
   padding: 20px;
-  
   border-radius: 8px;
-  margin-top: 1px;
+  margin-top: 10px;
   overflow-y: hidden;
   scrollbar-width: none; 
   scrollbar-color: #EFCA6C #ffffff
@@ -148,6 +48,7 @@
   width: 83rem;
   height: 55px;
   margin-left: 1px;
+  margin-top: -5px;
   border-radius: 5px;
 }
 .notif-box{

@@ -1,7 +1,7 @@
 import {useLocation, Link} from 'react-router-dom'
 // import { useState } from 'react'
 import logoAdmin from '../assets/El_Calejon.jpg'
-import '../Admin/Dashboard.css'
+import '../Admin/admin-css/Dashboard.css'
 import { FaThLarge } from 'react-icons/fa';
 import Lomi from '../assets/Lomi.png'
 import Palabok from '../assets/Palabok.png'
@@ -72,8 +72,7 @@ function Dashboard() {
         <div className='part'>
             <div className='nav-section'>
               <div className="navbar">
-              <FaThLarge style={{ marginRight: '0px', height: '43px', width: '43px', }} />
-              <h1 className='Dashboard-text'>DASHBOARD</h1>
+              <h1 className='Dashboard-text'><FaThLarge style={{ marginTop: '-9px', marginRight: '0px', height: '43px', width: '43px', }} />DASHBOARD</h1>
             </div>
           </div>
           

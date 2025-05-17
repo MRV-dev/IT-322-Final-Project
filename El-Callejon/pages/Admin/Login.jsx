@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import '../Admin/Login.css'
+import '../Admin/admin-css/Login.css'
 import Logo from '../assets/El_Calejon.jpg'
 
 function Login(){
@@ -13,7 +13,6 @@ function Login(){
 
   return(
     <>
-
       <div className='logIn-page'>
         <div className='logo-row'>
           <img className='logo' src={Logo} alt="" />

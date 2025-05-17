@@ -1,12 +1,12 @@
 import {useLocation, Link} from 'react-router-dom'
 // import { useState } from 'react'
 import logoAdmin from '../assets/El_Calejon.jpg'
-import '../Admin/admin-css/Onlineorder.css'
+import '../Admin/admin-css/Setting.css'
 import { FaThLarge } from 'react-icons/fa'
 
 
 
-function OnlineOrders() { 
+function Settings() { 
   // const [activeNav, setActiveNav] = useState('dashboard');
   const location = useLocation();
   const pathname = location.pathname;
@@ -48,43 +48,13 @@ function OnlineOrders() {
         <div className='part'>
             <div className='nav-section'>
               <div className="navbar">
-              <h1 className='OnineOrders-text'><FaThLarge style={{ marginTop: '-9px', marginRight: '0px', height: '43px', width: '43px', }} />OnineOrders</h1>
+              <h1 className='settings-text'><FaThLarge style={{ marginTop: '-9px', marginRight: '0px', height: '43px', width: '43px', }} />Settings</h1>
             </div>
           </div>
           
-          <div className='main-content-Online-orders'>
-            <div className='overview-container-online'>
-              <div className="Online-orders-table">
-                <h3 className="recent-orders-title">Recent Orders</h3>
-                <table className="recent-orders-table">
-                  <thead>
-                    <tr>
-                      <th>Date and Time</th>
-                      <th>Order Type</th>
-                      <th>Item</th>
-                      <th>Total</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Apr 13, 11:23 AM</td>
-                      <td>Walk-in</td>
-                      <td><strong>1x Spaghetti (Medium)</strong></td>
-                      <td>₱240</td>
-                      <td className="status-completed">Completed</td>
-                    </tr>
-                    <tr>
-                      <td>Apr 13, 10:45 AM</td>
-                      <td>Online</td>
-                      <td><strong>1x Spaghetti (Medium)</strong></td>
-                      <td>₱160</td>
-                      <td className="status-delivered">Delivered</td>
-                    </tr>
-                    {}
-                  </tbody>
-                </table>
-              </div>
+          <div className='main-content-dashboard'>
+            <div className='overview-container'>
+              
             </div>
           </div>
         </div> 
@@ -93,4 +63,4 @@ function OnlineOrders() {
   )
 }
 
-export default OnlineOrders
+export default Settings
