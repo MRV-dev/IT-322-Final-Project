@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* Admin */
 .whole-page {
   display: flex;
   height: 100vh;
@@ -13,7 +14,7 @@
 }
 
 .Logo-Admin{
-  height: 10%;
+  height: 70px;
   border-radius: 50%;
 }
 
@@ -34,10 +35,14 @@
   background-color: #ffffff;
   border-radius: 15px;
   margin-bottom: 10px;
-  height: 8.5vh;
+  height: 61px;
   margin-left: -14px;
-  width: 4.5vw;
+  width: 122%;
   border: none;
+}
+
+.nav:hover{
+  background-color: #FFE95D;
 }
 
 
@@ -51,19 +56,19 @@
 
 
 .dashboard-active {
-  background-color: #FFE95D; /* blue */
+  background-color: #FFE95D; 
 }
 
 .reports-active {
-  background-color: #FFE95D; /* green */
+  background-color: #FFE95D; 
 }
 
 .online-orders-active {
-  background-color: #FFE95D; /* yellow */
+  background-color: #FFE95D; 
 }
 
 .settings-active {
-  background-color: #FFE95D; /* cyan */
+  background-color: #FFE95D; 
 }
 .navigations{
   list-style-type: none;
@@ -101,6 +106,31 @@
   margin-left: 23px;
   margin-top: 12px;
 }
+
+
+
+
+
+
+/* Customers */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -39,6 +39,7 @@
   margin-top: 30px;
   margin-left: 3px;
   background: #faf9f7;
+  height: 120%;
   padding: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   width: 99.2%;
@@ -56,6 +57,7 @@
   width: 100%;
   border-collapse: collapse;
   background: #fff;
+  border: 1px solid #A4A0A0;
 }
 
 .recent-orders-table thead th {
@@ -64,6 +66,10 @@
   padding: 14px 12px;
   text-align: left;
   font-weight: 600;
+}
+.recent-orders-table thead th,
+.recent-orders-table tbody td{
+  border: 1px solid #A4A0A0;
 }
 
 .recent-orders-table th:first-child {

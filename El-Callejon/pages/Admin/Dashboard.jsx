@@ -42,35 +42,35 @@ function Dashboard() {
           <img className="Logo-Admin" src={logoAdmin} />
           <ul className='List'>
             <li className='navigations'>
-              <Link to="/Dashboard"
-              className={`nav ${pathname === '/Dashboard' ? 'dashboard-active' : ''}`}>
+              <Link to="/Admin-Dashboard"
+              className={`nav ${pathname === '/Admin-LoginDashboard' ? 'dashboard-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
 
             <li className='navigations'>
-              <Link to="/Reports"
-              className={`nav ${pathname === '/Reports' ? 'reports-active' : ''}`}>
+              <Link to="/Admin-Reports"
+              className={`nav ${pathname === '/Admin-LoginReports' ? 'reports-active' : ''}`}>
                 <FaThLarge className='nav-icons' /></Link> </li>
             
             <li className='navigations'>
-              <Link to="/OnlineOrders"
+              <Link to="/Admin-OnlineOrders"
               className={`nav ${pathname === '/OnlineOrders' ? 'online-orders-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
             
             <li className='navigations'>
-              <Link to="/Settings"
-              className={`nav ${pathname === '/Settings' ? 'settings-active' : ''}`}>
+              <Link to="/Admin-Settings"
+              className={`nav ${pathname === '/Admin-Settings' ? 'settings-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
             
             <hr className='line'/>
             
-            <Link to="/Login">
+            <Link to="/Admin-Login">
                 <FaThLarge style={{ marginLeft: '-1px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
           </ul>
         </div>
           
         <div className='part'>
-            <div className='nav-section'>
-              <div className="navbar">
+          <div className='nav-section'>
+            <div className="navbar">
               <h1 className='Dashboard-text'><FaThLarge style={{ marginTop: '-9px', marginRight: '0px', height: '43px', width: '43px', }} />DASHBOARD</h1>
             </div>
           </div>

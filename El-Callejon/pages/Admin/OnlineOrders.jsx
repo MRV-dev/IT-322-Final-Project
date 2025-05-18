@@ -18,31 +18,32 @@ function OnlineOrders() {
           <img className="Logo-Admin" src={logoAdmin} />
           <ul className='List'>
             <li className='navigations'>
-              <Link to="/Dashboard"
-              className={`nav ${pathname === '/Dashboard' ? 'dashboard-active' : ''}`}>
+              <Link to="/Admin-Dashboard"
+              className={`nav ${pathname === '/Admin-Dashboard' ? 'dashboard-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
 
             <li className='navigations'>
-              <Link to="/Reports"
-              className={`nav ${pathname === '/Reports' ? 'reports-active' : ''}`}>
+              <Link to="/Admin-Reports"
+              className={`nav ${pathname === '/Admin-Reports' ? 'reports-active' : ''}`}>
                 <FaThLarge className='nav-icons' /></Link> </li>
             
             <li className='navigations'>
-              <Link to="/OnlineOrders"
-              className={`nav ${pathname === '/OnlineOrders' ? 'online-orders-active' : ''}`}>
+              <Link to="/Admin-OnlineOrders"
+              className={`nav ${pathname === '/Admin-OnlineOrders' ? 'online-orders-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
             
             <li className='navigations'>
-              <Link to="/Settings"
-              className={`nav ${pathname === '/Settings' ? 'settings-active' : ''}`}>
+              <Link to="/Admin-Settings"
+              className={`nav ${pathname === '/Admin-Settings' ? 'settings-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
             
             <hr className='line'/>
             
-            <Link to="/Login">
+            <Link to="/Admin-Login">
                 <FaThLarge style={{ marginLeft: '-1px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
           </ul>
         </div>
+
           
         <div className='part'>
             <div className='nav-section'>
