@@ -43,17 +43,17 @@ function Dashboard() {
           <ul className='List'>
             <li className='navigations'>
               <Link to="/Admin-Dashboard"
-              className={`nav ${pathname === '/Admin-LoginDashboard' ? 'dashboard-active' : ''}`}>
+              className={`nav ${pathname === '/Admin-Dashboard' ? 'dashboard-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
 
             <li className='navigations'>
               <Link to="/Admin-Reports"
-              className={`nav ${pathname === '/Admin-LoginReports' ? 'reports-active' : ''}`}>
+              className={`nav ${pathname === '/Admin-Reports' ? 'reports-active' : ''}`}>
                 <FaThLarge className='nav-icons' /></Link> </li>
             
             <li className='navigations'>
               <Link to="/Admin-OnlineOrders"
-              className={`nav ${pathname === '/OnlineOrders' ? 'online-orders-active' : ''}`}>
+              className={`nav ${pathname === '/Admin-OnlineOrders' ? 'online-orders-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link> </li>
             
             <li className='navigations'>
