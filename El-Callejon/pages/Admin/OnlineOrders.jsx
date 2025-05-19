@@ -48,14 +48,15 @@ function OnlineOrders() {
         <div className='part'>
             <div className='nav-section'>
               <div className="navbar">
-              <h1 className='OnineOrders-text'><FaThLarge style={{ marginTop: '-9px', marginRight: '0px', height: '43px', width: '43px', }} />OnineOrders</h1>
+              <h1 className='OnineOrders-text'><FaThLarge style={{ marginTop: '-9px', marginRight: '0px', height: '43px', width: '43px', }} />OnlineOrders</h1>
             </div>
           </div>
           
           <div className='main-content-Online-orders'>
             <div className='overview-container-online'>
               <div className="Online-orders-table">
-                <h3 className="recent-orders-title">Recent Orders</h3>
+                <p className="search-text">Search:</p>
+                <input className='search-online-order' type="text" />
                 <table className="recent-orders-table">
                   <thead>
                     <tr>
@@ -83,6 +84,7 @@ function OnlineOrders() {
                       <td>₱160</td>
                       <td className="status-delivered">Delivered</td>
                     </tr>
+                    
                     {}
                   </tbody>
                 </table>

@@ -26,7 +26,7 @@ const data = [
   { name: 'Fri', sales: 600 },
   { name: 'Sat', sales: 800 },
   { name: 'Sun', sales: 750 },
-];
+];  
 
 
 

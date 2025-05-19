@@ -1,9 +1,8 @@
 .main-content-Online-orders{
   flex: 1;
-  height: 100vh;
+  height: 84vh;
   padding-left: 1.6%;
-  overflow-y: auto;
-  
+  margin-top: 25px;
 }
 
 .OnineOrders-text{
@@ -20,37 +19,42 @@
   padding: 20px;
   border-radius: 8px;
   margin-top: 1px;
-  overflow-y: hidden;
-  scrollbar-width: none; 
-  scrollbar-color: #EFCA6C #ffffff
-}
-.overview-container-online::-webkit-scrollbar { 
-  width: 0; 
-  height: 0; 
-
-} 
-.overview-container-online:hover {
-  overflow-y: auto;
+  
 }
 
 
 
 .Online-orders-table {
-  margin-top: 30px;
+  /* margin-top: px;  */
   margin-left: 3px;
   background: #faf9f7;
-  height: 120%;
+  height: 96%;
   padding: 20px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   width: 99.2%;
+  margin-top: -10px;
   border-radius: 7px;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  scrollbar-color: #EFCA6C #ffffff;
 }
 
-.recent-orders-title {
-  font-size: 18px;
+.search-text {
+  font-size: 17px;
   font-weight: 600;
   margin-bottom: 12px;
   color: #333;
+  display: inline-block;
+  margin-top: 16px;
+}
+.search-online-order{
+  border-width: thin;
+  border-radius: 6px;
+  padding-left: 7px;
+  margin-left: 4px;
+}
+.search-online-order:focus{
+  outline: none;
 }
 
 .recent-orders-table {
@@ -58,6 +62,7 @@
   border-collapse: collapse;
   background: #fff;
   border: 1px solid #A4A0A0;
+  
 }
 
 .recent-orders-table thead th {
