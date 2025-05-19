@@ -55,22 +55,11 @@
   color: black;
 }
 
-
-.dashboard-active {
+.dashboard-active, .reports-active, 
+.online-orders-active, .settings-active {
   background-color: #FFE95D; 
 }
 
-.reports-active {
-  background-color: #FFE95D; 
-}
-
-.online-orders-active {
-  background-color: #FFE95D; 
-}
-
-.settings-active {
-  background-color: #FFE95D; 
-}
 .navigations{
   list-style-type: none;
   margin-top: 25px;

@@ -1,5 +1,5 @@
 import {useLocation, Link} from 'react-router-dom'
-// import { useState } from 'react'
+import React, { useState } from 'react'
 import logoAdmin from '../assets/El_Calejon.jpg'
 import '../Admin/admin-css/Onlineorder.css'
 import { FaThLarge } from 'react-icons/fa'
@@ -10,6 +10,43 @@ function OnlineOrders() {
   // const [activeNav, setActiveNav] = useState('dashboard');
   const location = useLocation();
   const pathname = location.pathname;
+
+  // status update
+  const [, setSelectedRowId] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const openStatusModal = (rowId) => {
+    setSelectedRowId(rowId);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedRowId(null);
+  };
+
+  const handleStatusChange = () => {
+    closeModal();
+    closeOrderModal();
+  };
+
+
+
+  // view order modal
+  const [RowId, setRowId] = useState(null);
+  const [ShowOrderModal, setShow] = useState(false);
+
+  const viewOrderModal = (RowId) => {
+    setRowId(RowId)
+    setShow(true)
+  };
+
+  const closeOrderModal = () => {
+    setShow(false)
+    setRowId(null)
+  }
+
+
 
   return(
     <>
@@ -71,23 +108,52 @@ function OnlineOrders() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Apr 13, 11:23 AM</td>
-                      <td>Walk-in</td>
-                      <td><strong>1x Spaghetti (Medium)</strong></td>
-                      <td>₱240</td>
-                      <td className="status-completed">Completed</td>
+                      <td>00125</td>
+                      <td>2025-05-28</td>
+                      <td>John Dela Cruz</td>
+                      <td>Delivery</td>
+                      <td><button className='order-details' onClick={() => viewOrderModal(125)}>View Orders</button></td>
+                      <td>GCash</td>
+                      <td className="status"><button onClick={() => openStatusModal(125)}>Pending</button></td>
                     </tr>
                     <tr>
-                      <td>Apr 13, 10:45 AM</td>
-                      <td>Online</td>
-                      <td><strong>1x Spaghetti (Medium)</strong></td>
-                      <td>₱160</td>
-                      <td className="status-delivered">Delivered</td>
-                    </tr>
-                    
+                      <td>00143</td>
+                      <td>2025-05-28</td>
+                      <td>John Dela Cruz</td>
+                      <td>Reservation</td>
+                      <td><button className='order-details' onClick={() => viewOrderModal(125)}>View Orders</button></td>
+                      <td>GCash</td>
+                      <td className="status"><button onClick={() => openStatusModal(143)}>Pending</button></td>
+                    </tr>                    
                     {}
                   </tbody>
                 </table>
+                {/* order details modal */}
+                {showModal && (
+                  <div className="modal-overlay">
+                    <div className="modal-content">
+                      <h3 className='update-status-text'>Update Order Status</h3>
+                      <ul className="modal-status-options">
+                        <li className='modal-list' onClick={() => handleStatusChange("Pending")}>
+                          Pending</li>
+                        <li className='modal-list' onClick={() => handleStatusChange("Confirmed")}>
+                          Confirmed</li>
+                        <li className='modal-list' onClick={() => handleStatusChange("In Process")}>
+                          In Process</li>
+                      </ul>
+                      <button onClick={closeModal} className="close-modal">Close</button>
+                    </div>
+                  </div>
+                )}
+                 {ShowOrderModal && (
+                  <div className="view-order-modal-overlay">
+                    <div className="view-order-modal-content">
+                      <h3 className='update-status-text'>Order Details</h3>
+          
+                      <button onClick={closeOrderModal} className="close-modal">Close</button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
