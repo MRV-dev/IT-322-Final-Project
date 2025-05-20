@@ -7,16 +7,17 @@ import { FaThLarge } from 'react-icons/fa'
 
 
 function OnlineOrders() { 
-  // const [activeNav, setActiveNav] = useState('dashboard');
+
   const location = useLocation();
   const pathname = location.pathname;
 
   // status update
-  const [, setSelectedRowId] = useState(null);
+  const [SelectedRowId, setSelectedRowId] = useState(null);
+  // show order detail
   const [showModal, setShowModal] = useState(false);
 
-  const openStatusModal = (rowId) => {
-    setSelectedRowId(rowId);
+  const openStatusModal = (SelectedRowId) => {
+    setSelectedRowId(SelectedRowId);
     setShowModal(true);
   };
 
@@ -97,37 +98,89 @@ function OnlineOrders() {
                 <table className="recent-orders-table">
                   <thead>
                     <tr>
-                      <th>Order ID</th>
-                      <th>Order Placed</th>
-                      <th>Customer Name</th>
-                      <th>Order Method</th>
-                      <th>Order Details</th>
-                      <th>Payment Method</th>
-                      <th>Status</th>
+                      <th style={{textAlign: 'center'}}>Order ID</th>
+                      <th style={{textAlign: 'center'}}>Order Placed</th>
+                      <th style={{textAlign: 'center'}}>Customer Name</th>
+                      <th style={{textAlign: 'center'}}>Order Method</th>
+                      <th style={{textAlign: 'center'}}>Order Details</th>
+                      <th style={{textAlign: 'center'}}>Payment Method</th>
+                      <th style={{textAlign: 'center'}}>Status</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr style={{textAlign: 'center'}}>
                       <td>00125</td>
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Delivery</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal(125)}>View Orders</button></td>
+                      <td><button className='order-details' onClick={() => viewOrderModal(15)}>View Orders</button></td>
                       <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal(125)}>Pending</button></td>
+                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
                     </tr>
-                    <tr>
+
+                    <tr style={{textAlign: 'center'}}>
                       <td>00143</td>
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Reservation</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal(125)}>View Orders</button></td>
+                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
                       <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal(143)}>Pending</button></td>
-                    </tr>                    
+                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
+                    </tr>   
+
+                    <tr style={{textAlign: 'center'}}>
+                      <td>00125</td>
+                      <td>2025-05-28</td>
+                      <td>John Dela Cruz</td>
+                      <td>Delivery</td>
+                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td>GCash</td>
+                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
+                    </tr>
+
+                    <tr style={{textAlign: 'center'}}>
+                      <td>00143</td>
+                      <td>2025-05-28</td>
+                      <td>John Dela Cruz</td>
+                      <td>Reservation</td>
+                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td>GCash</td>
+                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
+                    </tr>    
+
+                    <tr style={{textAlign: 'center'}}>
+                      <td>00125</td>
+                      <td>2025-05-28</td>
+                      <td>John Dela Cruz</td>
+                      <td>Delivery</td>
+                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td>GCash</td>
+                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
+                    </tr>
+
+                    <tr style={{textAlign: 'center'}}>
+                      <td>00143</td>
+                      <td>2025-05-28</td>
+                      <td>John Dela Cruz</td>
+                      <td>Reservation</td>
+                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td>GCash</td>
+                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
+                    </tr>                           
                     {}
                   </tbody>
                 </table>
+
+                <ul className='online-orders-pagination'>
+                  <li className='pagination-item'>
+                    <button className='page'>&laquo;</button>
+                  </li>
+
+                  <li className='pagination-item'>
+                    <button className='page'>&raquo;</button>
+                  </li>
+                </ul>
+                
                 {/* order details modal */}
                 {showModal && (
                   <div className="modal-overlay">
