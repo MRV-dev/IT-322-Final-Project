@@ -167,11 +167,13 @@ function OnlineOrders() {
                         <td>{order.date}</td>
                         <td>{order.name}</td>                        
                         <td>{order.method}</td>
+                        
                         <td>
                           <button className="order-details-btn" onClick={viewOrderModal}>
                             View Orders
                           </button>
                         </td>
+
                         <td>{order.payment}</td> 
                         <td><button className="status" onClick={() => openStatusModal()}>Pending</button></td>
                       </tr>

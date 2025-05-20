@@ -220,7 +220,7 @@
   flex-direction: row;
   list-style-type: none;
   font-size: 2em;
-  gap: 7px;
+  gap: 1px;
   margin-left: 90%;
 }
 .pagination-item{
@@ -235,7 +235,8 @@
   font-weight: 600;
   height: 25px;
   width: 30px;
-  border: 1px solid rgb(119, 119, 119);
+  border: 1px solid rgb(214, 210, 210);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center; 
   align-items: center; 
