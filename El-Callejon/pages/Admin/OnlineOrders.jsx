@@ -210,7 +210,7 @@ function OnlineOrders() {
                       <a onClick={closeOrderModal} className="close-order-detail">&times;</a>
                       <div className='order-details'>
                         <div className='left'>
-
+                          <p></p>
                         </div>
                       </div>
                     </div>
