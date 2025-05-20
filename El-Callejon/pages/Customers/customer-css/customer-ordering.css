@@ -8,3 +8,32 @@
   margin-left: 50px;
   margin-top: 7px;
 }
+.left-Side-Menu{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.right-Side-Menu{
+   flex: 1;
+}
+
+.Nav-bar {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-left: 950px;
+  margin-top: -55px;
+  font-size: 1.5em;
+  gap: 20px;
+  
+}
+
+.link-text{
+  color: black;
+  
+}
+
+.Nav-link {
+  text-decoration: none;
+}
