@@ -9,6 +9,7 @@ import CustomerOrder from '../pages/Customers/customer-ordering.jsx'
 import POS from '../pages/Admin/POS.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomerLogin from '../pages/Customers/Customer-Login.jsx'
+import Customersignup from '../pages/Customers/customer-signup.jsx';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           <Route path="/El-Callejon-Menu" element={<CustomerOrder />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/CustomerLogin" element={<CustomerLogin />} />
+          <Route path="/CustomerSignup" element={<Customersignup />} />
+
+
           {/* 404 fallback route */}
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>

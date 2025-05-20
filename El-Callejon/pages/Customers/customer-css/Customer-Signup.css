@@ -30,7 +30,7 @@
   }
   
   
-  .Customer-Login{
+  .Customer-Signup{
     background-color: rgb(255, 255, 255);
     max-width: 100%;
     width: 700px;
@@ -83,10 +83,21 @@
   }
   
   
-  .eye-icon {
+  .eye-icon1 {
     position: absolute;
     right: 50px;
-    top: 37%;
+    top: 17%;
+    left: 86%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .eye-icon2 {
+    position: absolute;
+    right: 50px;
+    top: 67%;
     left: 86%;
     transform: translateY(-50%);
     font-size: 24px;
@@ -125,12 +136,12 @@
     margin-top: 20px;
   }
   
-  .account-register {
+  .account-login{
     color: #EFCA6C;
     text-decoration: none;
 
   }
-  .customer-register {
+  .Customer-Login {
     position: absolute;
     margin-left: -100px;
   }
