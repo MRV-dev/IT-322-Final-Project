@@ -26,6 +26,9 @@ function OnlineOrders() {
     setSelectedRowId(null);
   };
 
+
+
+
   const handleStatusChange = () => {
     closeModal();
     closeOrderModal();
@@ -46,6 +49,8 @@ function OnlineOrders() {
     setShow(false)
     setRowId(null)
   }
+
+
 
 
 
@@ -113,7 +118,7 @@ function OnlineOrders() {
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Delivery</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal(15)}>View Orders</button></td>
+                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
                       <td>GCash</td>
                       <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
                     </tr>
@@ -123,7 +128,7 @@ function OnlineOrders() {
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Reservation</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
                       <td>GCash</td>
                       <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
                     </tr>   
@@ -133,7 +138,7 @@ function OnlineOrders() {
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Delivery</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
                       <td>GCash</td>
                       <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
                     </tr>
@@ -143,7 +148,7 @@ function OnlineOrders() {
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Reservation</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
                       <td>GCash</td>
                       <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
                     </tr>    
@@ -153,7 +158,7 @@ function OnlineOrders() {
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Delivery</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
                       <td>GCash</td>
                       <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
                     </tr>
@@ -163,7 +168,7 @@ function OnlineOrders() {
                       <td>2025-05-28</td>
                       <td>John Dela Cruz</td>
                       <td>Reservation</td>
-                      <td><button className='order-details' onClick={() => viewOrderModal()}>View Orders</button></td>
+                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
                       <td>GCash</td>
                       <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
                     </tr>                           
@@ -201,9 +206,13 @@ function OnlineOrders() {
                  {ShowOrderModal && (
                   <div className="view-order-modal-overlay">
                     <div className="view-order-modal-content">
-                      <h3 className='update-status-text'>Order Details</h3>
-          
-                      <button onClick={closeOrderModal} className="close-modal">Close</button>
+                      <h3 className='order-detail-text'>Order Details</h3>
+                      <a onClick={closeOrderModal} className="close-order-detail">&times;</a>
+                      <div className='order-details'>
+                        <div className='left'>
+
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}

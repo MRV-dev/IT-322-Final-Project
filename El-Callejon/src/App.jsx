@@ -6,6 +6,7 @@ import Reports from '../pages/Admin/Reports.jsx'
 import OnlineOrders from '../pages/Admin/OnlineOrders.jsx'
 import Settings from '../pages/Admin/settings.jsx'
 import CustomerOrder from '../pages/Customers/customer-ordering.jsx'
+import POS from '../pages/Admin/POS.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Admin-Reports" element={<Reports/>} />
           <Route path="/Admin-OnlineOrders" element={<OnlineOrders/>} />
           <Route path="/Admin-Settings" element={<Settings/>} />
+          <Route path="/POS" element={<POS/>} />
 
 
           {/* Customer */}
