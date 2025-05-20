@@ -65,6 +65,7 @@
   
 }
 
+
 .recent-orders-table thead th {
   background-color: #b3b3b3;
   color: #fff;
@@ -76,6 +77,7 @@
 .recent-orders-table tbody td{
   border: 1px solid #A4A0A0;
 }
+
 
 .recent-orders-table th:first-child {
   border-top-left-radius: 0px;
@@ -91,19 +93,12 @@
   color: #333;
   font-size: 15px;
 }
-
 .recent-orders-table tr:last-child td {
   border-bottom: none;
 }
 
-.status-completed {
-  color: green;
-  font-weight: 500;
-}
-
-.status-delivered {
-  color: #007bff;
-  font-weight: 500;
+.centered-row{
+  text-align: center;
 }
 
 
@@ -140,8 +135,15 @@
   border: 1px solid rgb(186, 186, 186);
   border-radius: 3px;
   width: 105px;
-  
 }
+
+.status{
+  border-radius: 3px;
+  border: none;
+  width: 80px;
+  background: transparent;
+}
+
 
 .modal-status-options {
   list-style: none;

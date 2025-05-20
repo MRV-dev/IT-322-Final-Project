@@ -159,17 +159,17 @@ function Dashboard() {
                   <tbody>
                     <tr>
                       <td>Apr 13, 11:23 AM</td>
-                      <td>Walk-in</td>
+                      <td>Online</td>
                       <td><strong>1x Spaghetti (Medium)</strong></td>
                       <td>₱240</td>
-                      <td className="status-completed">Completed</td>
+                      <td className="status-completed">Delivered</td>
                     </tr>
                     <tr>
                       <td>Apr 13, 10:45 AM</td>
-                      <td>Online</td>
+                      <td>Walk-in</td>
                       <td><strong>1x Spaghetti (Medium)</strong></td>
                       <td>₱160</td>
-                      <td className="status-delivered">Delivered</td>
+                      <td className="status-delivered">Completed</td>
                     </tr>
                     {}
                   </tbody>

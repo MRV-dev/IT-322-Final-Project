@@ -11,6 +11,7 @@ function OnlineOrders() {
   const location = useLocation();
   const pathname = location.pathname;
 
+
   // status update
   const [SelectedRowId, setSelectedRowId] = useState(null);
   // show order detail
@@ -20,21 +21,16 @@ function OnlineOrders() {
     setSelectedRowId(SelectedRowId);
     setShowModal(true);
   };
-
   const closeModal = () => {
     setShowModal(false);
     setSelectedRowId(null);
   };
 
-
-
-
+  // closes the modals both view order and status
   const handleStatusChange = () => {
     closeModal();
     closeOrderModal();
   };
-
-
 
   // view order modal
   const [RowId, setRowId] = useState(null);
@@ -44,7 +40,6 @@ function OnlineOrders() {
     setRowId(RowId)
     setShow(true)
   };
-
   const closeOrderModal = () => {
     setShow(false)
     setRowId(null)
@@ -52,6 +47,57 @@ function OnlineOrders() {
 
 
 
+  // table data
+  const orders = [
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+      id: '00143',
+      date: '2025-05-28',
+      name: 'John Dela Cruz',
+      method: 'Reservation',
+      payment: 'GCash',
+      status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+  ];
 
 
   return(
@@ -100,6 +146,8 @@ function OnlineOrders() {
               <div className="Online-orders-table">
                 <p className="search-text">Search:</p>
                 <input className='search-online-order' type="text" />
+
+                {/* Table */}
                 <table className="recent-orders-table">
                   <thead>
                     <tr>
@@ -113,66 +161,21 @@ function OnlineOrders() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00125</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Delivery</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00143</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Reservation</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>   
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00125</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Delivery</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00143</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Reservation</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>    
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00125</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Delivery</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00143</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Reservation</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>                           
-                    {}
+                    {orders.map((order, index) => (
+                      <tr key={index} className='centered-row'>
+                        <td>{order.id}</td>
+                        <td>{order.date}</td>
+                        <td>{order.name}</td>                        
+                        <td>{order.method}</td>
+                        <td>
+                          <button className="order-details-btn" onClick={viewOrderModal}>
+                            View Orders
+                          </button>
+                        </td>
+                        <td>{order.payment}</td> 
+                        <td><button className="status" onClick={() => openStatusModal()}>Pending</button></td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
 
