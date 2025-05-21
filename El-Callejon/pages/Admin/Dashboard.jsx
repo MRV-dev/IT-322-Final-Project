@@ -39,7 +39,7 @@ function Dashboard() {
     <>
       <div className="whole-page">
         <div className="side-bar">
-          <img className="Logo-Admin" src={logoAdmin} />
+          <img className="Logo-Dashboard" src={logoAdmin} />
           <ul className='List'>
             <li className='navigations'>
               <Link to="/Admin-Dashboard"

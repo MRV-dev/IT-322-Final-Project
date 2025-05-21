@@ -14,9 +14,10 @@
   font-family: Segoe UI;
 }
 
-.Logo-Admin{
-  height: 70px;
+.Logo-Dashboard{
+  height: 75px;
   border-radius: 50%;
+  margin-left: -3px;
 }
 
 
