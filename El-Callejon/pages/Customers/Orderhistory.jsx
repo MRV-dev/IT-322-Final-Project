@@ -1,10 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import '../Customers/customer-css/Orderhistory.css'
-import logoAdmin from '../assets/El_Calejon.jpg'
+import logo from '../assets/El_Calejon.jpg'
 import Profile from '../assets/Profile.jpg'
 import { FaBell, FaUser, FaLock, FaClock, FaClipboardList, FaSignOutAlt } from 'react-icons/fa';
 
 function Orderhistory() {
+    const location = useLocation();
+  const pathname = location.pathname;
 
   const orders = [
     {
@@ -26,7 +28,7 @@ function Orderhistory() {
   return (
     <div className="account-container">
       <nav className="navbar">
-          <img className="Logo-Admin" src={logoAdmin} />
+          <img className="Logo-Admin" src={logo} />
         <div className="nav-links">
           <li><Link to='/Customers-landingPage'><span className='link-text'>Home</span></Link></li>
           <li><Link to='/Customers-OrderNow'><span className='link-text'>ORDER NOW</span></Link></li>
@@ -59,7 +61,7 @@ function Orderhistory() {
                 className={`nav ${pathname === '/Customers-Orderhistory' ? 'orderhistory-active' : ''}`}>
                 <FaClipboardList className='nav-icons'/>Order History</Link> </li>
                         <hr className='line'/>
-              <li> <Link to="/Customers-CustomersLogin"
+              <li> <Link to="/Customers-CustomerLogin"
                 className={`nav ${pathname === '/Customers-CustomerLogin' ? 'customerlogin-active' : ''}`}>
                 <FaSignOutAlt className='nav-icons'/>Logout</Link> </li>
                         <hr className='line'/>

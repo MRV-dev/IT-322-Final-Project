@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import logoAdmin from '../assets/El_Calejon.jpg'
+import logo from '../assets/El_Calejon.jpg'
 import Profile from '../assets/Profile.jpg'
 import '../Customers/customer-css/Password.css'
 import { FaBell, FaUser, FaLock, FaClock, FaClipboardList, FaSignOutAlt } from 'react-icons/fa';
@@ -34,14 +34,14 @@ function Password() {
   return (
     <div className="account-container">
       <nav className="navbar">
-          <img className="Logo-Admin" src={logoAdmin} />
-        <div className="nav-links">
-          <li><Link to='/Customers-landingPage'><span className='link-text'>Home</span></Link></li>
+          <img className="Logo-Admin" src={logo} />
+        <ul className="nav-links">
+          <li><Link to='/Customers-LandingPage'><span className='link-text'>HOME</span></Link></li>
           <li><Link to='/Customers-OrderNow'><span className='link-text'>ORDER NOW</span></Link></li>
           <li><Link to='/Customers-Contact'><span className='link-text'>CONTACT US</span></Link></li>
-          <FaBell className="icon" />
-          <FaUser className="icon" />
-        </div>
+          <li><Link to='/Customers-Notification'><FaBell  className="icon" /></Link></li>
+          <li><Link to='/Customers-Account'><FaUser className="icon" /></Link></li>
+        </ul>
       </nav>
 
       <div className="account-wrapper">
@@ -67,7 +67,7 @@ function Password() {
                 className={`nav ${pathname === '/Customers-Orderhistory' ? 'orderhistory-active' : ''}`}>
                 <FaClipboardList className='nav-icons'/>Order History</Link> </li>
                         <hr className='line'/>
-              <li> <Link to="/Customers-CustomersLogin"
+              <li> <Link to="/Customers-CustomerLogin"
                 className={`nav ${pathname === '/Customers-CustomerLogin' ? 'customerlogin-active' : ''}`}>
                 <FaSignOutAlt className='nav-icons'/>Logout</Link> </li>
                         <hr className='line'/>

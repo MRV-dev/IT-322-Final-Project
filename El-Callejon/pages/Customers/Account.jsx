@@ -25,11 +25,11 @@ function Account() {
       <nav className="navbar">
           <img className="Logo-Admin" src={logo} />
         <ul className="nav-links">
-          <li><Link to='/Customers-landingPage'><span className='link-text'>HOME</span></Link></li>
+          <li><Link to='/Customers-LandingPage'><span className='link-text'>HOME</span></Link></li>
           <li><Link to='/Customers-OrderNow'><span className='link-text'>ORDER NOW</span></Link></li>
           <li><Link to='/Customers-Contact'><span className='link-text'>CONTACT US</span></Link></li>
-          <li><FaBell className="icon" /></li>
-          <li><FaUser className="icon" /></li>
+          <li><Link to='/Customers-Notification'><FaBell  className="icon" /></Link></li>
+          <li><Link to='/Customers-Account'><FaUser className="icon" /></Link></li>
         </ul>
       </nav>
 
@@ -74,7 +74,7 @@ function Account() {
             </li>
             <hr className='line'/>
             <li>
-              <Link to="/Customers-CustomersLogin"
+              <Link to="/Customers-CustomerLogin"
                 className={`nav ${pathname === '/Customers-CustomerLogin' ? 'customerlogin-active' : ''}`}>
                 <FaSignOutAlt className='nav-icons'/>Logout
               </Link>
