@@ -1,11 +1,16 @@
+import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { FaEye, FaSearch, FaFileAlt, FaTimes } from 'react-icons/fa';
-import './Orders.css';
-
-const OrdersPage = () => {
+import logoAdmin from '../assets/El_Calejon.jpg'
+import Profile from '../assets/Profile.jpg'
+import '../Customers/customer-css/Orders.css';
+import { FaUser, FaLock, FaClock, FaClipboardList, FaSignOutAlt, FaBell, FaEye, FaFileAlt, FaTimes } from 'react-icons/fa';
+function Orders() {
   const [showViewModal, setShowViewModal] = useState(false);
   const [showTrackModal, setShowTrackModal] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
+
+    const location = useLocation();
+    const pathname = location.pathname;
 
   const orders = [
     { id: '00230', method: 'Reservation', status: 'Pending' },
@@ -42,38 +47,52 @@ const OrdersPage = () => {
   const getTotal = (items) => items.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="d-flex ">
-      {/* Sidebar */}
-      <div className="sidebar p-3">
-        <div className="logo-circle mb-3">
-          <img src="public/cropped_image.png" alt="Logo" className="logo-img" />
+    <div className="account-container">
+      <nav className="navbar">
+          <img className="Logo-Admin" src={logoAdmin} />
+        <div className="nav-links">
+          <li><Link to='/Customers-landingPage'><span className='link-text'>Home</span></Link></li>
+          <li><Link to='/Customers-OrderNow'><span className='link-text'>ORDER NOW</span></Link></li>
+          <li><Link to='/Customers-Contact'><span className='link-text'>CONTACT US</span></Link></li>
+          <FaBell className="icon" />
+          <FaUser className="icon" />
         </div>
-        <div className="profile-section text-center mb-4">
-          <img src="public/cropped_image.png" alt="Profile" className="profile-pic mb-2" />
-        </div>
-        <div className="nav flex-column text-center">
-          <div className="nav-link">👤 Account</div>
-          <div className="nav-link">🔒 Password</div>
-          <div className="nav-link active">⏱ Orders</div>
-          <div className="nav-link">🗂 Order History</div>
-          <div className="nav-link">↩ Log Out</div>
-        </div>
-      </div>
+      </nav>
 
-      {/* Main Content */}
-      <div className="flex-grow-1">
-        {/* Top Bar */}
-        <div className="d-flex justify-content-between align-items-center px-4 py-3 topbar">
-          <div className="nav-links d-flex gap-3">
-            <a href="#">HOME</a>
-            <a href="#">ORDER NOW</a>
-            <a href="#">CONTACT US</a>
+      <div className="account-wrapper">
+      <aside className="sidebar">
+          <div className="profile-pic">
+            <img className="Profile" src={Profile} />
           </div>
-          <div className="d-flex gap-3">
-            <div className="icon-circle">🔔</div>
-            <div className="icon-circle">👤</div>
-          </div>
-        </div>
+          <ul className="sidebar-menu">
+                        <hr className='line'/>
+              <li> <Link to="/Customers-Account"
+                className={`nav ${pathname === '/Customers-Account' ? 'account-active' : ''}`}>
+                <FaUser className='nav-icons'/>Account</Link> </li>
+                        <hr className='line'/>
+              <li> <Link to="/Customers-Password"
+                className={`nav ${pathname === '/Customers-Password' ? 'password-active' : ''}`}>
+                <FaLock className='nav-icons' />Password</Link> </li>
+                        <hr className='line'/>
+              <li> <Link to="/Customers-Orders"
+                className={`nav ${pathname === '/Customers-Orders' ? 'orders-active' : ''}`}>
+                <FaClock className='nav-icons'/>Orders</Link> </li>
+                        <hr className='line'/>
+              <li> <Link to="/Customers-Orderhistory"
+                className={`nav ${pathname === '/Customers-Orderhistory' ? 'orderhistory-active' : ''}`}>
+                <FaClipboardList className='nav-icons'/>Order History</Link> </li>
+                        <hr className='line'/>
+              <li> <Link to="/Customers-CustomersLogin"
+                className={`nav ${pathname === '/Customers-CustomerLogin' ? 'customerlogin-active' : ''}`}>
+                <FaSignOutAlt className='nav-icons'/>Logout</Link> </li>
+                        <hr className='line'/>
+          </ul>
+        </aside>
+
+        <div>
+        <main className="account-settings">
+          <h2>Orders</h2>
+        </main>
 
         {/* Orders Section */}
         <div className="p-4 orders-section">
@@ -173,8 +192,9 @@ const OrdersPage = () => {
           </div>
         )}
       </div>
+      </div>
     </div>
   );
-};
+}
 
-export default OrdersPage;
+export default Orders

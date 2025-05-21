@@ -105,7 +105,7 @@
   text-decoration: none;
 }
 
-.nav-to-customer:active {
+.nav-to-customer:active { 
   text-decoration: underline;
 }
 

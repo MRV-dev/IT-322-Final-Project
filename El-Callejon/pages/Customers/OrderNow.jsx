@@ -1,8 +1,13 @@
+import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import Logo from '../assets/El_Calejon.jpg'
-import '../Customers/customer-css/customer-ordering.css'
-import {Link} from 'react-router-dom'
+import '../Customers/customer-css/ordernow.css'
 
-function CustomerOrder() {
+
+function OrderNow() {
+  const location = useLocation();
+  const pathname = location.pathname;
+
   return(
     <>
       <div className="OnlineOrder">
@@ -43,4 +48,4 @@ function CustomerOrder() {
   )
 }
 
-export default CustomerOrder
+export default OrderNow

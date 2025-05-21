@@ -1,5 +1,5 @@
 /* LOGIN STYLE */
-.logIn-page{
+.signup-page{
     background-color: #ECECEC;
     width: 99vw;
     height: 100vh;
@@ -56,7 +56,7 @@
   }
   
   
-  .username, .password {
+  .email, .password {
     font-family: 'Segoe UI', sans-serif;
     padding-left: 10px;
     border-radius: 9px;
@@ -70,7 +70,7 @@
     margin-bottom: 18px;
   }
   
-  .username::placeholder,
+  .email::placeholder,
   .password::placeholder {
     color: rgb(179, 179, 179);
   }
@@ -103,20 +103,6 @@
     font-size: 24px;
     cursor: pointer;
     color: #888;
-  }
-  
-  
-  .nav-to-customer {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 16px;
-    color: black;
-    padding-top: 30px;
-    padding-left: 330px;
-    text-decoration: none;
-  }
-  
-  .nav-to-customer:active {
-    text-decoration: underline;
   }
   
   

@@ -1,11 +1,11 @@
 import Logo from '../assets/El_Calejon.jpg'
-import '../Customers/customer-css/customer-ordering.css'
+import '../Customers/customer-css/Contact.css'
 import {Link} from 'react-router-dom'
 
 function Contact() {
   return(
     <>
-      <div className="OnlineOrder">
+      <div className="Contact">
         <div className="customer-nav">
           <img className='Logo' src={Logo}  />
           <ul className=''>
