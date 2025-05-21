@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import '../Customers/customer-css/Customer-signup.css'
+import '../Customers/customer-css/CustomerSignup.css'
 import Logo from '../assets/El_Calejon.jpg'
 
-function Customersignup (){
+function CustomerSignup (){
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
@@ -13,30 +13,29 @@ function Customersignup (){
 
   return(
     <>
-      <div className='logIn-page'>
+      <div className='signup-page'>
         <div className='logo-row'>
           <img className='logo' src={Logo} alt="" />
         </div>
         <div className="Customer-Signup">
           <div className="container">
             <h2 className='Signup-Text'>LomiHub</h2>
-            <input className="username" type="text" placeholder="Email"/>
+            <input className="email" type="text" placeholder="Email"/>
             <div className="password-wrapper">
               <input className="password" type={showPassword ? "text" : 'password'} placeholder="Enter Password"/>
               <span onClick={togglePasswordVisibility} className="eye-icon1">{showPassword ? <FaEyeSlash/> : <FaEye/>}</span>
-              <input className="password" type={showPassword ? "text" : 'password'} placeholder="Comfirm Password"/>
+              <input className="password" type={showPassword ? "text" : 'password'} placeholder="Confirm Password"/>
               <span onClick={togglePasswordVisibility} className="eye-icon2">{showPassword ? <FaEyeSlash/> : <FaEye/>}</span>
             </div>
-            <a className='nav-to-customer' href="">Admin</a>
-            <Link to="/LandingPage" className="link"><button className="btn-Login" >Sign Up</button></Link> 
+            <Link to="/Customers-LandingPage" className="link"><button className="btn-Login" >Sign Up</button></Link> 
           </div> 
         </div>
-        <div >
-            <p className='customer-Login'>Already have an account? <a href="" className='account-login'>Login</a></p>
+        <div className='customer-Login'>
+            <p>Already have an account? <Link to="/Customers-CustomerLogin"className='account-login'>Login</Link></p>
         </div>
       </div>
     </>
   )
 }
 
-export default Customersignup
+export default CustomerSignup

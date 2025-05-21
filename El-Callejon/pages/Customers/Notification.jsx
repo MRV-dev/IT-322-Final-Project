@@ -1,12 +1,14 @@
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/El_Calejon.jpg'
-import '../Customers/customer-css/Contact.css'
-import {Link} from 'react-router-dom'
+import '../Customers/customer-css/Notification.css'
 import { FaBell, FaUser} from 'react-icons/fa';
 
-function Contact() {
-  return(
-    <>
-      <div className="Contact">
+function Notification() {
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  return (
+    <div className="account-container">
       <nav className="navbar">
           <img className="Logo-Admin" src={logo} />
         <ul className="nav-links">
@@ -17,13 +19,15 @@ function Contact() {
           <li><Link to='/Customers-Account'><FaUser className="icon" /></Link></li>
         </ul>
       </nav>
-        <div>
-            <h2>GET IN TOUCH</h2>
-        </div>
+
+
+      <div>
+        <main>
+          <h2></h2>
+        </main>
       </div>
-    
-    </>
-  )
+    </div>
+  );
 }
 
-export default Contact 
+export default Notification
