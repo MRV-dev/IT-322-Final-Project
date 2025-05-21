@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import logoAdmin from '../assets/El_Calejon.jpg'
 import '../Admin/admin-css/Onlineorder.css'
 import { FaThLarge } from 'react-icons/fa'
+import Gcash from '../assets/gcash-sample.PNG'
 
 
 
@@ -100,6 +101,33 @@ function OnlineOrders() {
   ];
 
 
+
+  const orderdetails = [
+    {
+    quantity: 2,
+    dish: 'Lomi',
+    price: '₱85.00',
+    },
+    {
+    quantity: 2,
+    dish: 'Spagetti - Medium',
+    price: '₱85.00',
+    },
+    {
+    quantity: 2,
+    dish: 'Spagetti - Medium',
+    price: '₱85.00',
+    },
+    
+  ]
+
+  const totalPrice = orderdetails.reduce((total, item) => {
+  const numericPrice = parseFloat(item.price.replace('₱', ''));
+  return total + (numericPrice * item.quantity);
+}, 0);
+
+
+
   return(
     <>
       <div className="whole-page">
@@ -167,7 +195,7 @@ function OnlineOrders() {
                         <td>{order.date}</td>
                         <td>{order.name}</td>                        
                         <td>{order.method}</td>
-                        
+
                         <td>
                           <button className="order-details-btn" onClick={viewOrderModal}>
                             View Orders
@@ -208,14 +236,46 @@ function OnlineOrders() {
                     </div>
                   </div>
                 )}
+
+
                  {ShowOrderModal && (
                   <div className="view-order-modal-overlay">
                     <div className="view-order-modal-content">
                       <h3 className='order-detail-text'>Order Details</h3>
                       <a onClick={closeOrderModal} className="close-order-detail">&times;</a>
-                      <div className='order-details'>
+
+                      <div className='order-summary'>
                         <div className='left'>
-                          <p></p>
+                          <div className='dish-details'>
+                              {orderdetails.map((orderdetails) => (
+                                <div className='Ordered-dish'>
+                                  <p className='quantity'>{orderdetails.quantity}</p>
+                                  <p className='dish'>{orderdetails.dish}</p>
+                                  <p className='price'>{orderdetails.price}</p>
+                                </div>
+                              ))}
+                              <div className='total-price'>
+                                <hr className='Line-price' />
+                                <strong className='price-text'>Total Price:</strong> ₱{totalPrice.toFixed(2)}
+                              </div>
+                              <div className='add-details'>
+                                <div className='Address'>
+                                  <h4 style={{fontSize: '1.3em'}}>Address</h4>
+                                  <div className='address-customer'>
+                                    <p>Lumbang na Calzada</p>
+                                  </div>
+                                </div>
+                                <div className='phone-number'>
+                                  <h4 style={{fontSize: '1.3em'}}>Phone Number</h4>
+                                  <div className='customer-phone-number'>
+                                    <p>09123456789</p>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div className='right'>
+                          <img className='gcash' src={Gcash} />
                         </div>
                       </div>
                     </div>

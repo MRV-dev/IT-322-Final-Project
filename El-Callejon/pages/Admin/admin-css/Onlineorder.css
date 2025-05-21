@@ -196,20 +196,85 @@
   background: #fff;
   padding: 50px 32px;
   border-radius: 12px;
-  width: 800px;
+  width: 755px;
   height: 500px;
   font-weight: 500;
 }
 .close-order-detail{
   position: absolute;
-  margin-left: 728px;
+  margin-left: 686px;
   font-weight: 700;
   color: #000000;
-  margin-top: -60px;
+  margin-top: -64px;
   text-decoration: none;
   font-size: 30px;
   cursor: pointer;
 }
+
+
+/* order details */
+.order-summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.Ordered-dish{
+  display: grid;
+  grid-template-columns: 5px 1fr 116px;
+  font-size: 1.4em;
+  font-weight: 400;
+  gap: 40px;
+  align-items: center;
+}
+
+.Line-price{
+  margin-top: 80px;
+  width: 20.5em;
+  margin-left: -15px;
+}
+
+.price-text{
+  padding-right: 210px;
+}
+
+.total-price{
+  font-size: 1.4em;
+}
+
+.add-details{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 1em;
+  margin-left: -20px;
+}
+.address-customer{
+  border: 1px solid ;
+  border-radius: 30px;
+  height: 30px;
+  width: 180px;
+}
+.customer-phone-number{
+  border: 1px solid ;
+  border-radius: 30px;
+  height: 30px;
+  width: 180px;
+}
+.gcash{
+  height: 25em;
+}
+
+.left{
+  flex: 1;
+}
+.right{
+  flex-shrink: 0; 
+}
+
 
 
 
@@ -245,13 +310,5 @@
 }
 
 
-.left{
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.right{
-   flex: 1;
-}
+
 
