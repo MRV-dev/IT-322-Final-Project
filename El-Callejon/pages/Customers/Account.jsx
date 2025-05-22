@@ -105,7 +105,7 @@ function Account() {
         </aside>
       </div>
 
-      <div>
+      <div className='customer-account'>
         <main className="account-settings">
           <h2>Account Settings</h2>
 
