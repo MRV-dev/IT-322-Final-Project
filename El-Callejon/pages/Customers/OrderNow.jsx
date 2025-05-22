@@ -1,12 +1,17 @@
+import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import logo from '../assets/El_Calejon.jpg'
-import '../Customers/customer-css/Contact.css'
-import {Link} from 'react-router-dom'
+import '../Customers/customer-css/ordernow.css'
 import { FaBell, FaUser} from 'react-icons/fa';
 
-function Contact() {
+
+function OrderNow() {
+  const location = useLocation();
+  const pathname = location.pathname;
+
   return(
     <>
-      <div className="Contact">
+      <div className="OnlineOrder">
       <nav className="navbar">
           <img className="Logo-Admin" src={logo} />
         <ul className="nav-links">
@@ -17,8 +22,22 @@ function Contact() {
           <li><Link to='/Customers-Account'><FaUser className="icon" /></Link></li>
         </ul>
       </nav>
-        <div>
-            <h2>GET IN TOUCH</h2>
+        <div className='Menu'>
+          <div className='left-Side-Menu'>
+            <div className='Category'>
+              <div>
+                <p>Dishes</p>
+              </div>
+              <div>
+                <p>Bilao</p>
+              </div>
+              <div>
+                <p>Dessert</p>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     
@@ -26,4 +45,4 @@ function Contact() {
   )
 }
 
-export default Contact 
+export default OrderNow

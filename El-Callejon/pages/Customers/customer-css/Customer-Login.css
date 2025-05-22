@@ -1,33 +1,31 @@
 /* LOGIN STYLE */
-.logIn-page{
-    background-color: #ECECEC;
-    width: 99vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.login-page{
+  background-color: #ECECEC;
+  width: 99vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
   
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
   
   
-  .logo-row {
-    margin-bottom: 2%;
-    margin-top: -3%;
-    
-  }
+.logo-row {
+  margin-bottom: 2%;
+  margin-top: -3%;   
+}
   
-  .logo {
-    border-radius: 100%;
-    height: 120px;
-   
-  }
+.customer-logo {
+  border-radius: 100%;
+  height: 120px;  
+}
   
   
   .Customer-Login{
@@ -47,7 +45,7 @@
     text-decoration: none;
   }
   
-  .Login-Text {
+  .Signup-Text {
     font-family: 'Segoe UI', sans-serif;
     font-size: 44px;
     font-weight: 400;
@@ -56,7 +54,7 @@
   }
   
   
-  .username, .password {
+  .email, .password {
     font-family: 'Segoe UI', sans-serif;
     padding-left: 10px;
     border-radius: 9px;
@@ -70,7 +68,7 @@
     margin-bottom: 18px;
   }
   
-  .username::placeholder,
+  .email::placeholder,
   .password::placeholder {
     color: rgb(179, 179, 179);
   }
@@ -83,10 +81,21 @@
   }
   
   
-  .eye-icon {
+  .eye-icon1 {
     position: absolute;
     right: 50px;
-    top: 37%;
+    top: 17%;
+    left: 86%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .eye-icon2 {
+    position: absolute;
+    right: 50px;
+    top: 67%;
     left: 86%;
     transform: translateY(-50%);
     font-size: 24px;
@@ -95,7 +104,7 @@
   }
   
   
-  .nav-to-customer {
+  .nav-to-admin {
     font-family: 'Segoe UI', sans-serif;
     font-size: 16px;
     color: black;
@@ -104,7 +113,7 @@
     text-decoration: none;
   }
   
-  .nav-to-customer:active {
+  .nav-to-admin:active {
     text-decoration: underline;
   }
   
@@ -125,12 +134,12 @@
     margin-top: 20px;
   }
   
-  .account-register {
+  .account-register{
     color: #EFCA6C;
     text-decoration: none;
 
   }
-  .customer-register {
+  .Customer-Login {
     position: absolute;
     margin-left: -100px;
   }

@@ -15,7 +15,7 @@ function Login(){
     <>
       <div className='logIn-page'>
         <div className='logo-row'>
-          <img className='logo' src={Logo} alt="" />
+          <img className='admin-logo' src={Logo} alt="" />
         </div>
         <div className="Admin-Login">
           <div className="container">
@@ -25,7 +25,7 @@ function Login(){
               <input className="password" type={showPassword ? "text" : 'password'} placeholder="Enter Password"/>
               <span onClick={togglePasswordVisibility} className="eye-icon">{showPassword ? <FaEyeSlash/> : <FaEye/>}</span>
             </div>
-            <a className='nav-to-customer' href="">Customer</a>
+            <Link to="/Customers-CustomerLogin" className="nav-to-customer">Customer</Link> 
             <Link to="/Admin-Dashboard" className="link"><button className="btn-Login" >Log In</button></Link> 
           </div>    
         </div>
