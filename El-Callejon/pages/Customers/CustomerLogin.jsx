@@ -26,7 +26,7 @@ function CustomerLogin(){
               <span onClick={togglePasswordVisibility} className="eye-icon">{showPassword ? <FaEyeSlash/> : <FaEye/>}</span>
             </div>
             <Link to="/Customers-CustomerLogin" className="nav-to-customer">Admin</Link> 
-            <Link to="/Admin-Dashboard" className="link"><button className="btn-Login" >Log In</button></Link> 
+            <Link to="/Customers-LandingPage" className="link"><button className="btn-Login" >Log In</button></Link> 
           </div>  
           <div className='customer-register'>
             <p >Don't have an account? <Link to="/Customers-CustomerSignup"className='account-register'>Sign Up</Link></p>
