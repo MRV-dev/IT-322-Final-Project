@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 
-.navbar {
+.account-navbar {
   background-color: #EFCA6C;
   padding: 5px 2rem;
   display: flex;
@@ -18,27 +18,15 @@ body {
   align-items: center;
 }
 
-.nav-links {
+.Nav-link {
   display: flex;
   align-items: center;
   gap: 1rem;
   font-weight: bold;
+  margin-top: 80px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-}
 
-.nav-links .icon {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.account-wrapper {
-  display: flex;
-  flex: 1;
-}
 
 .sidebar {
   width: 250px;
