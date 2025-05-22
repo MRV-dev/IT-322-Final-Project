@@ -1,27 +1,25 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
-import logo from '../assets/El_Calejon.jpg'
+import Logo from '../assets/El_Calejon.jpg'
 import '../Customers/customer-css/ordernow.css'
-import { FaBell, FaUser} from 'react-icons/fa';
-
+import {Link} from 'react-router-dom'
 
 function OrderNow() {
-  const location = useLocation();
-  const pathname = location.pathname;
-
   return(
     <>
       <div className="OnlineOrder">
-      <nav className="navbar">
-          <img className="Logo-Admin" src={logo} />
-        <ul className="nav-links">
-          <li><Link to='/Customers-LandingPage'><span className='link-text'>HOME</span></Link></li>
-          <li><Link to='/Customers-OrderNow'><span className='link-text'>ORDER NOW</span></Link></li>
-          <li><Link to='/Customers-Contact'><span className='link-text'>CONTACT US</span></Link></li>
-          <li><Link to='/Customers-Notification'><FaBell  className="icon" /></Link></li>
-          <li><Link to='/Customers-Account'><FaUser className="icon" /></Link></li>
-        </ul>
-      </nav>
+        <div className="customer-nav">
+          <img className='Logo' src={Logo}  />
+          <ul className='Nav-bar'>
+            <li className=''><Link className='Nav-link' to='/Home'>
+            <span className='link-text'>Home</span></Link></li>
+
+            <li className=''><Link className='Nav-link' to='/Home'>
+            <span className='link-text'>Order Now</span></Link></li>
+
+            <li className=''><Link className='Nav-link' to='/Home'>
+            <span className='link-text'>Contact Us</span></Link></li>
+            
+          </ul>
+        </div>
         <div className='Menu'>
           <div className='left-Side-Menu'>
             <div className='Category'>
