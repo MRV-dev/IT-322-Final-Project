@@ -30,7 +30,7 @@ function CustomerSignup (){
             <Link to="/Customers-LandingPage" className="link"><button className="btn-Login" >Sign Up</button></Link> 
           </div> 
         </div>
-        <div className='customer-Login'>
+        <div className='customer-login'>
             <p>Already have an account? <Link to="/Customers-CustomerLogin"className='account-login'>Login</Link></p>
         </div>
       </div>

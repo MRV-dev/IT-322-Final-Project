@@ -52,38 +52,34 @@ function Password() {
       <div className="account-wrapper">
         <aside className="sidebar">
           <div className="profile-pic">
-            <img className="Profile" src={Profile} />
+            <img className="Profile" src={Profile} alt="Profile" />
+            <div className="photo-buttons">
+              <button className="btn">Change Photo</button>
+              <button className="btn remove">Remove</button>
+            </div>
           </div>
-          <ul className="sidebar-menu">
-                        <hr className='line'/>
-              <li> <Link to="/Customers-Account"
-                className={`nav ${pathname === '/Customers-Account' ? 'account-active' : ''}`}>
-                <FaUser className='nav-icons'/>Account</Link> </li>
-                        <hr className='line'/>
-              <li> <Link to="/Customers-Password"
-                className={`nav ${pathname === '/Customers-Password' ? 'password-active' : ''}`}>
-                <FaLock className='nav-icons' />Password</Link> </li>
-                        <hr className='line'/>
-              <li> <Link to="/Customers-Orders"
-                className={`nav ${pathname === '/Customers-Orders' ? 'orders-active' : ''}`}>
-                <FaClock className='nav-icons'/>Orders</Link> </li>
-                        <hr className='line'/>
-              <li> <Link to="/Customers-Orderhistory"
-                className={`nav ${pathname === '/Customers-Orderhistory' ? 'orderhistory-active' : ''}`}>
-                <FaClipboardList className='nav-icons'/>Order History</Link> </li>
-                        <hr className='line'/>
-              <li> <Link to="/Customers-CustomerLogin"
-                className={`nav ${pathname === '/Customers-CustomerLogin' ? 'customerlogin-active' : ''}`}>
-                <FaSignOutAlt className='nav-icons'/>Logout</Link> </li>
-                        <hr className='line'/>
+        <ul className="sidebar-menu">
+            <li className={pathname === '/Customers-Account' ? 'active' : ''}>
+              <Link to="/Customers-Account">
+                <div className="menu-item"><FaUser size={20} color="black" /><span>Account</span></div></Link>
+            </li>
+            <li className={pathname === '/Customers-Password' ? 'active' : ''}>
+              <Link to="/Customers-Password"><div className="menu-item"><FaLock size={20} color="black" /><span>Password</span></div></Link>
+            </li>
+            <li className={pathname === '/Customers-Orders' ? 'active' : ''}>
+              <Link to="/Customers-Orders"><div className="menu-item"><FaClock size={20} color="black" /><span>Orders</span></div></Link>
+            </li>
+            <li className={pathname === '/Customers-Orderhistory' ? 'active' : ''}>
+              <Link to="/Customers-Orderhistory"><div className="menu-item"><FaClipboardList size={20} color="black" /><span>Order History</span></div></Link>
+            </li>
+            <li className={pathname === '/Customers-CustomerLogin' ? 'active' : ''}>
+              <Link to="/Customers-CustomerLogin"><div className="menu-item"><FaSignOutAlt size={20} color="black" /><span>Logout</span></div></Link>
+            </li>
           </ul>
         </aside>
-        </div>
-
-        <main className="account-settings">
+        <main className="password">
           <h2>Change Password</h2>
            <form onSubmit={handleSubmit} className="password-form">
-            <div className="form-group">
               <h2>Current Password</h2>
               <input
                 type="password"
@@ -92,9 +88,6 @@ function Password() {
                 onChange={handleChange}
                 required
               />
-            </div>
-
-            <div className="form-group">
               <h2>New Password</h2>
               <input
                 type="password"
@@ -103,9 +96,6 @@ function Password() {
                 onChange={handleChange}
                 required
               />
-            </div>
-
-            <div className="form-group">
               <h2>Confirm Password</h2>
               <input
                 type="password"
@@ -114,12 +104,11 @@ function Password() {
                 onChange={handleChange}
                 required
               />
-            </div>
-
             <button type="submit" className="submit-btn">Submit</button>
           </form>
         </main>
       </div>
+      /</div>
   );
 }
 

@@ -31,16 +31,17 @@
   
   
   .Customer-Signup{
-    background-color: rgb(255, 255, 255);
-    max-width: 100%;
-    width: 700px;
-    padding: 3%;
-    padding-bottom: 2%;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  width: 700px;
+  padding: 3%;
+  padding-bottom: 2%;
+  border-radius: 40px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   }
   
   .link{
@@ -127,7 +128,9 @@
     text-decoration: none;
 
   }
-  .Customer-Login {
-    position: absolute;
-    margin-left: -100px;
+
+.customer-login {
+  position: absolute;
+  margin-left: 45px;
+  margin-top: 495px;
   }

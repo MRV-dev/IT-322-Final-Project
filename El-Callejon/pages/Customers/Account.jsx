@@ -47,34 +47,36 @@ function Account() {
               <button className="btn remove">Remove</button>
             </div>
           </div>
-          <ul className="sidebar-menu">
+          
+        <ul className="sidebar-menu">
             <li className={pathname === '/Customers-Account' ? 'active' : ''}>
-              <Link to="/Customers-Account"><FaUser className='nav-icons'/>Account</Link>
+              <Link to="/Customers-Account">
+                <div className="menu-item"><FaUser size={20} color="black" /><span>Account</span></div></Link>
             </li>
             <li className={pathname === '/Customers-Password' ? 'active' : ''}>
-              <Link to="/Customers-Password"><FaLock className='nav-icons' />Password</Link>
+              <Link to="/Customers-Password"><div className="menu-item"><FaLock size={20} color="black" /><span>Password</span></div></Link>
             </li>
             <li className={pathname === '/Customers-Orders' ? 'active' : ''}>
-              <Link to="/Customers-Orders"><FaClock className='nav-icons'/>Orders</Link>
+              <Link to="/Customers-Orders"><div className="menu-item"><FaClock size={20} color="black" /><span>Orders</span></div></Link>
             </li>
             <li className={pathname === '/Customers-Orderhistory' ? 'active' : ''}>
-              <Link to="/Customers-Orderhistory"><FaClipboardList className='nav-icons'/>Order History</Link>
+              <Link to="/Customers-Orderhistory"><div className="menu-item"><FaClipboardList size={20} color="black" /><span>Order History</span></div></Link>
             </li>
             <li className={pathname === '/Customers-CustomerLogin' ? 'active' : ''}>
-              <Link to="/Customers-CustomerLogin"><FaSignOutAlt className='nav-icons'/>Logout</Link>
+              <Link to="/Customers-CustomerLogin"><div className="menu-item"><FaSignOutAlt size={20} color="black" /><span>Logout</span></div></Link>
             </li>
           </ul>
         </aside>
-        <main className="account-settings">
-          <h2>Account Settings</h2> {/* More descriptive heading */}
+
+        <main className="account">
+          <h2>Account Settings</h2>
           {['name', 'email', 'address', 'phone'].map((field) => (
             <div className="form-group" key={field}>
               <label>{field.charAt(0).toUpperCase() + field.slice(1).replace('phone', 'Phone Number')}</label>
               <input
                 type="text"
                 value={formData[field]}
-                onChange={(e) => handleChange(field, e.target.value)}
-              />
+                onChange={(e) => handleChange(field, e.target.value)} />
               <button className="edit-btn">EDIT</button>
             </div>
           ))}
