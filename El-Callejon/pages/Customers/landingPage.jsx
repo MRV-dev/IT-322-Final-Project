@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/El_Calejon.jpg'
+import Logo from '../assets/El_Calejon.jpg'
 import '../Customers/customer-css/landingpage.css'
 import { FaBell, FaUser, FaLock, FaClock, FaClipboardList, FaSignOutAlt } from 'react-icons/fa';
 
@@ -8,17 +8,22 @@ function LandingPage() {
   const pathname = location.pathname;
 
   return (
-    <div className="homepage-container">
-      <nav className="navbar">
-          <img className="Logo-Admin" src={logo} />
-        <ul className="nav-links">
-          <li><Link to='/Customers-LandingPage'><span className='link-text'>HOME</span></Link></li>
-          <li><Link to='/Customers-OrderNow'><span className='link-text'>ORDER NOW</span></Link></li>
-          <li><Link to='/Customers-Contact'><span className='link-text'>CONTACT US</span></Link></li>
-          <li><Link to='/Customers-Notification'><FaBell  className="icon" /></Link></li>
-          <li><Link to='/Customers-Account'><FaUser className="icon" /></Link></li>
-        </ul>
-      </nav>
+ <div className="Account">
+        <div className="customer-nav">
+          <img className='Logo' src={Logo} alt="Logo" />
+          <ul className='nav-bar'>
+            <li><Link className='nav-link' to='/Customers-LandingPage'>
+              <span className='link-text'>Home</span></Link></li>
+            <li><Link className='nav-link' to='/Customers-OrderNow'>
+              <span className='link-text'>Order Now</span></Link></li>
+            <li><Link className='nav-link' to='/Customers-Contact'>
+              <span className='link-text'>Contact Us</span></Link></li>
+            <li className='icon-item'>
+              <Link to='/Customers-Notification' className='Nav-link'><FaBell size={20} color="black" /></Link></li>
+            <li className='icon-item'>
+              <Link to='/Customers-Account' className='Nav-link'><FaUser size={20} color="black" /></Link></li>
+          </ul>
+        </div>
 
       <section className="hero-section">
         <div className="hero-text">

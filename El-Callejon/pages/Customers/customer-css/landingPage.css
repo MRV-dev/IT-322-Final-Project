@@ -1,9 +1,9 @@
-/* landingpage.css */
+/* HomePage.css */
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .homepage-container {
@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
 }
 
-.navbar {
+.homepage-header {
   background-color: #f2ce63;
   display: flex;
   justify-content: space-between;
@@ -19,40 +19,19 @@ body {
   padding: 16px 40px;
 }
 
-.Logo-Admin {
+.header-logo {
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-links li {
-  display: flex;
-  align-items: center;
-}
-
 .nav-links a {
+  margin-left: 30px;
   text-decoration: none;
-  color: #000;
   font-weight: 500;
+  color: black;
 }
 
-.link-text {
-  font-size: 16px;
-}
-
-.icon {
-  font-size: 20px;
-  color: #000;
-}
-
-/* Hero Section Styling */
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -97,12 +76,14 @@ body {
   background-color: #e7bc4c;
 }
 
-/* Image Section */
+.hero-image {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-image img {
   max-width: 520px;
   height: auto;
-  z-index: 2;
-  position: relative;
 }
 
 .hero-section::after {
