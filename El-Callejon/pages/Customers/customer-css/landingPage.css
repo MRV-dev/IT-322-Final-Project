@@ -1,36 +1,43 @@
-/* HomePage.css */
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: white;
+.account-container {
+  height: 100%;
+  overflow: hidden;
 }
 
-.homepage-container {
-  width: 100%;
-  overflow-x: hidden;
+/* NAVBAR  */
+.customer-nav{
+  background-color: #EFCA6C;
+  height: 6rem;
 }
 
-.homepage-header {
-  background-color: #f2ce63;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 40px;
-}
-
-.header-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.nav-links a {
+.Logo{
+  height: 80px;
+  border-radius: 60px;
   margin-left: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  color: black;
+  margin-top: 9px;
 }
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-left: 75%;
+  margin-top: -50px;
+  font-size: 1rem;
+  gap: 20px;
+}
+
+.link-text{
+  color: black;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+.icon-item {
+  margin-top: -3px;
+}
+
+
 
 .hero-section {
   display: flex;

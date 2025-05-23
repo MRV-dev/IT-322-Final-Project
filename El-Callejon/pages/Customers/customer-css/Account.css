@@ -1,4 +1,10 @@
-.customer.nav{
+.account-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* NAVBAR  */
+.customer-nav{
   background-color: #EFCA6C;
   height: 6rem;
 }
@@ -6,56 +12,41 @@
 .Logo{
   height: 80px;
   border-radius: 60px;
-  margin-left: 50px;
-  margin-top: 7px;
+  margin-left: 30px;
+  margin-top: 9px;
 }
 
-
-.account-navbar {
-  background-color: #EFCA6C;
-  padding: 5px 2rem;
+.nav-bar {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  margin-left: 73%;
-  margin-top: -55px;
+  margin-left: 75%;
+  margin-top: -50px;
   font-size: 1rem;
   gap: 20px;
-  
 }
 
 .link-text{
   color: black;
   text-decoration: none;
-}
-
-.nav-link {
-  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
 }
 
 .icon-item {
-  margin-top: 8px;
+  margin-top: -3px;
 }
 
-.account-wrapper {
+
+/* SIDEBAR */
+.sidebar-setting {
   display: flex;
   flex: 1;
 }
-.Nav-link {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: bold;
-  margin-top: 80px;
-}
-
-.customer-account{
-  display: inline-block;
-}
 
 .sidebar {
-  width: 300px;
-  background-color: #f0f0f0; 
+  width: 250px;
+  background-color: #ffffff; 
   padding: 30px;
   border-right: 1px solid #ccc;
 }
@@ -66,8 +57,8 @@
 }
 
 .profile-pic img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -89,6 +80,11 @@
   background-color: rgb(255, 255, 255);
 }
 
+.btn.change {
+  color: #4343e7;
+  border-color: #4343e7;
+}
+
 .btn.remove {
   color: red;
   border-color: red;
@@ -102,8 +98,7 @@
 
 .sidebar-menu li {
   padding: 1rem;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -125,49 +120,89 @@
 .menu-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem; 
+  gap: 2rem; 
 }
 
-.account {
+
+/* MAIN */
+.account-setting {
   flex: 1;
-  padding: 20px;
-  background-color: #e9e9e9;
+  padding: 30px;
+  background-color: #ECECEC;
 }
 
-.account h2 {
+.account-setting h2 {
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-weight: 700;
+  color: #333;
 }
 
-.form-group {
+.account-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #000000;
+  font-size: 1.1rem;
+}
+
+.info-value-container {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
-.form-group label {
-  width: 150px;
+.info-value {
+  flex: 1;
+  padding: 0.8rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border-left: 3px solid #EFCA6C;
+}
+
+.info-input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.edit-btn, .save-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   font-weight: bold;
 }
 
-.form-group input {
-  flex: 1;
-  padding: 0.5rem;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+.edit-btn {
+  background-color: #EFCA6C;
+  color: #333;
 }
 
-.edit-btn {
-  padding: 0.5rem 1rem;
-  background-color: rgb(213, 201, 201);
-  border: 1px solid #333;
-  cursor: pointer;
+.save-btn {
+  background-color: #70a972;
+  color: white;
 }
 
 .edit-btn:hover {
-  background-color: #caaf5e;
-  border-color: #000;
+  background-color: #e5c05e;
 }
 
+.save-btn:hover {
+  background-color: #45a049;
+}

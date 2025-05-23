@@ -1,40 +1,38 @@
+.account-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* NAVBAR  */
 .customer-nav{
   background-color: #EFCA6C;
   height: 6rem;
 }
+
 .Logo{
   height: 80px;
   border-radius: 60px;
-  margin-left: 50px;
-  margin-top: 7px;
-}
-.left-Side-Menu{
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.right-Side-Menu{
-   flex: 1;
+  margin-left: 30px;
+  margin-top: 9px;
 }
 
-.Nav-bar {
+.nav-bar {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  margin-left: 950px;
-  margin-top: -55px;
-  font-size: 1.5em;
+  margin-left: 75%;
+  margin-top: -50px;
+  font-size: 1rem;
   gap: 20px;
-  
 }
 
 .link-text{
   color: black;
-  
-}
-
-.Nav-link {
   text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
 }
 
+.icon-item {
+  margin-top: -3px;
+}
