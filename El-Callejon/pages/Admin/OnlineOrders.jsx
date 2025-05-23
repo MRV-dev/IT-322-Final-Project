@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import logoAdmin from '../assets/El_Calejon.jpg'
 import '../Admin/admin-css/Onlineorder.css'
 import { FaThLarge } from 'react-icons/fa'
+import Gcash from '../assets/gcash-sample.PNG'
 
 
 
@@ -10,6 +11,7 @@ function OnlineOrders() {
 
   const location = useLocation();
   const pathname = location.pathname;
+
 
   // status update
   const [SelectedRowId, setSelectedRowId] = useState(null);
@@ -20,21 +22,16 @@ function OnlineOrders() {
     setSelectedRowId(SelectedRowId);
     setShowModal(true);
   };
-
   const closeModal = () => {
     setShowModal(false);
     setSelectedRowId(null);
   };
 
-
-
-
+  // closes the modals both view order and status
   const handleStatusChange = () => {
     closeModal();
     closeOrderModal();
   };
-
-
 
   // view order modal
   const [RowId, setRowId] = useState(null);
@@ -44,7 +41,6 @@ function OnlineOrders() {
     setRowId(RowId)
     setShow(true)
   };
-
   const closeOrderModal = () => {
     setShow(false)
     setRowId(null)
@@ -52,13 +48,91 @@ function OnlineOrders() {
 
 
 
+  // table data
+  const orders = [
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+      id: '00143',
+      date: '2025-05-28',
+      name: 'John Dela Cruz',
+      method: 'Reservation',
+      payment: 'GCash',
+      status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+    {
+    id: '00125',
+    date: '2025-05-28',
+    name: 'John Dela Cruz',
+    method: 'Delivery',
+    payment: 'GCash',
+    status: 'Pending'
+    },
+  ];
+
+
+
+  const orderdetails = [
+    {
+    quantity: 2,
+    dish: 'Lomi',
+    price: '₱85.00',
+    },
+    {
+    quantity: 2,
+    dish: 'Spagetti - Medium',
+    price: '₱85.00',
+    },
+    {
+    quantity: 2,
+    dish: 'Spagetti - Medium',
+    price: '₱85.00',
+    },
+    
+  ]
+
+  const totalPrice = orderdetails.reduce((total, item) => {
+  const numericPrice = parseFloat(item.price.replace('₱', ''));
+  return total + (numericPrice * item.quantity);
+}, 0);
+
 
 
   return(
     <>
       <div className="whole-page">
         <div className="side-bar">
-          <img className="Logo-Admin" src={logoAdmin} />
+          <img className="Logo-Dashboard" src={logoAdmin} />
           <ul className='List'>
             <li className='navigations'>
               <Link to="/Admin-Dashboard"
@@ -100,6 +174,8 @@ function OnlineOrders() {
               <div className="Online-orders-table">
                 <p className="search-text">Search:</p>
                 <input className='search-online-order' type="text" />
+
+                {/* Table */}
                 <table className="recent-orders-table">
                   <thead>
                     <tr>
@@ -113,66 +189,23 @@ function OnlineOrders() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00125</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Delivery</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>
+                    {orders.map((order, index) => (
+                      <tr key={index} className='centered-row'>
+                        <td>{order.id}</td>
+                        <td>{order.date}</td>
+                        <td>{order.name}</td>                        
+                        <td>{order.method}</td>
 
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00143</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Reservation</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>   
+                        <td>
+                          <button className="order-details-btn" onClick={viewOrderModal}>
+                            View Orders
+                          </button>
+                        </td>
 
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00125</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Delivery</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00143</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Reservation</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>    
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00125</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Delivery</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>
-
-                    <tr style={{textAlign: 'center'}}>
-                      <td>00143</td>
-                      <td>2025-05-28</td>
-                      <td>John Dela Cruz</td>
-                      <td>Reservation</td>
-                      <td><button className='order-details-btn' onClick={() => viewOrderModal()}>View Orders</button></td>
-                      <td>GCash</td>
-                      <td className="status"><button onClick={() => openStatusModal()}>Pending</button></td>
-                    </tr>                           
-                    {}
+                        <td>{order.payment}</td> 
+                        <td><button className="status" onClick={() => openStatusModal()}>Pending</button></td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
 
@@ -203,14 +236,46 @@ function OnlineOrders() {
                     </div>
                   </div>
                 )}
+
+
                  {ShowOrderModal && (
                   <div className="view-order-modal-overlay">
                     <div className="view-order-modal-content">
                       <h3 className='order-detail-text'>Order Details</h3>
                       <a onClick={closeOrderModal} className="close-order-detail">&times;</a>
-                      <div className='order-details'>
-                        <div className='left'>
 
+                      <div className='order-summary'>
+                        <div className='left'>
+                          <div className='dish-details'>
+                              {orderdetails.map((orderdetails) => (
+                                <div className='Ordered-dish'>
+                                  <p className='quantity'>{orderdetails.quantity}</p>
+                                  <p className='dish'>{orderdetails.dish}</p>
+                                  <p className='price'>{orderdetails.price}</p>
+                                </div>
+                              ))}
+                              <div className='total-price'>
+                                <hr className='Line-price' />
+                                <strong className='price-text'>Total Price:</strong> ₱{totalPrice.toFixed(2)}
+                              </div>
+                              <div className='add-details'>
+                                <div className='Address'>
+                                  <h4 style={{fontSize: '1.3em'}}>Address</h4>
+                                  <div className='address-customer'>
+                                    <p>Lumbang na Calzada</p>
+                                  </div>
+                                </div>
+                                <div className='phone-number'>
+                                  <h4 style={{fontSize: '1.3em'}}>Phone Number</h4>
+                                  <div className='customer-phone-number'>
+                                    <p>09123456789</p>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div className='right'>
+                          <img className='gcash' src={Gcash} />
                         </div>
                       </div>
                     </div>

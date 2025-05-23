@@ -38,6 +38,39 @@ function Account() {
           </ul>
         </div>
 
+    <div className="account-container">
+      <nav className="account-navbar">
+        <img className="Logo-Admin" src={logo} />
+        <ul className='Nav-bar'>
+            <li><Link className='Nav-link' to='/Home'>
+              <span className='link-text'>Home</span></Link>
+            </li>
+
+            <li><Link className='Nav-link' to='/OrderNow'>
+              <span className='link-text'>Order Now</span></Link>
+            </li>
+
+            <li><Link className='Nav-link' to='/Contact'>
+              <span className='link-text'>Contact Us</span></Link>
+            </li>
+
+           
+            <li className='icon-item'>
+              <Link to='/Customers-Notification' className='Nav-link'>
+                <FaBell size={26} color="black" />
+              </Link>
+            </li>
+
+          
+            <li className='icon-item'>
+              <Link to='/Customers-Account' className='Nav-link'>
+                <FaUser size={28} color="black" />
+              </Link>
+            </li>
+
+          </ul>
+      </nav>
+
       <div className="account-wrapper">
         <aside className="sidebar">
           <div className="profile-pic">
@@ -68,7 +101,12 @@ function Account() {
           </ul>
         </aside>
 
+
         <main className="account">
+
+      <div className='customer-account'>
+        <main className="account-settings">
+
           <h2>Account Settings</h2>
           {['name', 'email', 'address', 'phone'].map((field) => (
             <div className="form-group" key={field}>

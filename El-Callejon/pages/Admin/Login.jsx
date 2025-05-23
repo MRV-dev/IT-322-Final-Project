@@ -15,7 +15,7 @@ function Login(){
     <>
       <div className='logIn-page'>
         <div className='logo-row'>
-          <img className='logo' src={Logo} alt="" />
+          <img className='admin-logo' src={Logo} alt="" />
         </div>
         <div className="Admin-Login">
           <div className="container">

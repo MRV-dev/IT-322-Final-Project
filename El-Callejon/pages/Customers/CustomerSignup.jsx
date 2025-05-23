@@ -15,7 +15,7 @@ function CustomerSignup (){
     <>
       <div className='signup-page'>
         <div className='logo-row'>
-          <img className='logo' src={Logo} alt="" />
+          <img className='customer-logo' src={Logo} alt="" />
         </div>
         <div className="Customer-Signup">
           <div className="container">

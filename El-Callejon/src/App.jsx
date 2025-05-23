@@ -7,8 +7,8 @@ import Settings from '../pages/Admin/settings.jsx'
 import POS from '../pages/Admin/POS.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomerLogin from '../pages/Customers/CustomerLogin.jsx'
-import CustomerSignup from '../pages/Customers/customerSignup.jsx';
-import LandingPage from '../pages/Customers/LandingPage.jsx';
+import CustomerSignup from '../pages/Customers/CustomerSignup.jsx';
+import LandingPage from '../pages/Customers/landingPage.jsx';
 import OrderNow from '../pages/Customers/OrderNow.jsx'
 import Contact from '../pages/Customers/Contact.jsx'
 import Account from '../pages/Customers/Account.jsx';
