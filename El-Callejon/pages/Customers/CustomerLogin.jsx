@@ -35,7 +35,6 @@ function CustomerLogin(){
           <div className='customer-register'>
             <p >Don't have an account? <Link to="/Customers-CustomerSignup"className='account-register'>Sign Up</Link></p>
         </div> 
-        </div>
       </div>
     </>
   )
