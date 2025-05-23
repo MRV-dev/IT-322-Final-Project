@@ -1,23 +1,46 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f2f2f2;
+.customer.nav{
+  background-color: #EFCA6C;
+  height: 6rem;
 }
 
-.account-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+.Logo{
+  height: 80px;
+  border-radius: 60px;
+  margin-left: 50px;
+  margin-top: 7px;
 }
+
 
 .account-navbar {
   background-color: #EFCA6C;
   padding: 5px 2rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+  margin-left: 73%;
+  margin-top: -55px;
+  font-size: 1rem;
+  gap: 20px;
+  
 }
 
+.link-text{
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.icon-item {
+  margin-top: 8px;
+}
+
+.account-wrapper {
+  display: flex;
+  flex: 1;
+=======
 .Nav-link {
   display: flex;
   align-items: center;
@@ -31,19 +54,20 @@ body {
 }
 
 .sidebar {
-  width: 250px;
-  background-color: white;
-  padding: 2rem 1rem;
+  width: 300px;
+  background-color: #f0f0f0; 
+  padding: 30px;
   border-right: 1px solid #ccc;
 }
 
 .profile-pic {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .profile-pic img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -52,15 +76,17 @@ body {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .btn {
-  padding: 0.3rem 0.5rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
   cursor: pointer;
   border: 1px solid #333;
-  background-color: white;
+  color: red;
+  border-color: red;
+  background-color: rgb(255, 255, 255);
 }
 
 .btn.remove {
@@ -71,30 +97,44 @@ body {
 .sidebar-menu {
   list-style: none;
   padding: 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .sidebar-menu li {
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding:1rem;
-  cursor: pointer;
+  gap: 0.5rem; 
+
 }
 
 .sidebar-menu li.active,
 .sidebar-menu li:hover {
-  background-color: #f2c94c;
-  font-weight: bold;
+  background-color: #EFCA6C;
+  font-weight: 500;
 }
 
-.account-settings {
+.sidebar-menu li a { 
+  text-decoration: none; 
+  color: black;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+}
+
+.account {
   flex: 1;
-  padding: 2rem;
+  padding: 20px;
   background-color: #e9e9e9;
 }
 
-.account-settings h2 {
+.account h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
@@ -103,7 +143,7 @@ body {
 .form-group {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
   margin-bottom: 1rem;
 }
 
@@ -121,12 +161,13 @@ body {
 
 .edit-btn {
   padding: 0.5rem 1rem;
-  background-color: white;
+  background-color: rgb(213, 201, 201);
   border: 1px solid #333;
   cursor: pointer;
 }
 
 .edit-btn:hover {
-  background-color: #f2c94c;
+  background-color: #caaf5e;
   border-color: #000;
 }
+
