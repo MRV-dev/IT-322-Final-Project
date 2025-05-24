@@ -106,7 +106,7 @@ function Dashboard() {
                     </div>
                   </div>
 
-                  <div className='LineChart' style={{ width: '101.7%', height: 330, marginTop: '10px' }}>
+                  <div className='LineChart' style={{ width: 'auto', height: '20rem', marginTop: '10px' }}>
                     <ResponsiveContainer>
                       <LineChart data={data} margin={{ top: 50, right: 30, left: 0, bottom: 0 }}>
                         {/* <CartesianGrid strokeDasharray="0" /> */}

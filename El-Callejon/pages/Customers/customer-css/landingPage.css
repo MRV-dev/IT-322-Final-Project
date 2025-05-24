@@ -101,6 +101,6 @@
   width: 50%;
   height: 100%;
   background-color: #f2ce63;
-  clip-path: ellipse(80% 100% at 100% 100%);
+  clip-path: ellipse(80% 100% at 80% 10%);
   z-index: 1;
 }

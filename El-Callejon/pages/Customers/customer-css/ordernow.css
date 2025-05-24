@@ -1,38 +1,105 @@
-.account-container {
-  height: 100%;
+.category-list{
+  display: flex;
+  gap: 40px;
+}
+
+.category-link{
+  background-color: white;
+  padding: 1.3rem ;
+  width: 9em;
+  height: 9em;
+  border-radius: 20px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin-top: 13px;
+  text-align: center;
+}
+
+.category-name{
+  font-size: 21px;
+}
+
+.Dishes, .bilao, 
+.dessert{
+  height: 5em;
+}
+.bilao{
+  margin-top: -5px;
+}
+
+.dish{
+  list-style: none;
+}
+
+
+
+.order-content {
+  display: flex;
+  height: 87vh; 
   overflow: hidden;
 }
-
-/* NAVBAR  */
-.customer-nav{
-  background-color: #EFCA6C;
-  height: 6rem;
+.Order-container{
+  flex: 2;
+  overflow-y: auto;
+  height: 100vh;
+  padding-right: 10px;
+  scrollbar-width: none; 
+  scrollbar-color: #EFCA6C #ffffff
+}
+.Order-container::-webkit-scrollbar {
+  width: 6px;
+}
+.Order-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
 
-.Logo{
-  height: 80px;
-  border-radius: 60px;
-  margin-left: 30px;
-  margin-top: 9px;
+
+.dishes-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-left: 60px;
 }
 
-.nav-bar {
+.dish{
+  background-color: #fff;
+  border-radius: 6px;
+  width: 17em;
+  height: 15em;
+  padding: 4em;
   display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin-left: 75%;
-  margin-top: -50px;
-  font-size: 1rem;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+}
+.dish-image{
+  height: 130px;
+  position: relative;
+  margin-top: -60px;
 }
 
-.link-text{
-  color: black;
-  text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
+
+
+
+
+.order-summary {
+  width: 478px; 
+  position: sticky;
+  margin-top: -1px;
+  align-self: flex-start;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 90vh;
+  overflow: hidden;
+  margin-right: 3em; 
+  padding: 10px;
 }
 
-.icon-item {
-  margin-top: -3px;
+.order-details {
+  background-color: #ffffff;
+  width: 100%; 
+  height: 39.1em;
 }
+
+

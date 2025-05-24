@@ -25,9 +25,9 @@
   flex-shrink: 0;
   display: inline-block;
   align-items: center;
-  padding: 20px;
-  width: 110px;
-  height: 97vh;
+  padding: 1.5em;
+  width: 7em;
+  height: 45em;
   margin-left: 10px;
   margin-top: 10px;
   background-color: #EFCA6C;
@@ -37,9 +37,9 @@
   background-color: #ffffff;
   border-radius: 15px;
   margin-bottom: 10px;
-  height: 61px;
+  height: 3.6rem;
   margin-left: -14px;
-  width: 122%;
+  width: 4em;
   border: none;
 }
 
@@ -49,10 +49,10 @@
 
 
 .nav-icons{
-  margin-left: 13px;
+  margin-left: 12px;
   margin-top: 8px;
-  height: 43px;
-  width: 43px;
+  height: 2.5rem;
+  width: 2.5rem;
   color: black;
 }
 
@@ -90,14 +90,13 @@
 
 .navbar {
   margin-top: 5px;
-  padding: 10px;
-  width: 86rem;
+  padding: 10rem;
+  width: 86em;
   background-color: #EFCA6C;
   border-radius: 8px;
   margin-left: 23px;
-  margin-top: 12px;
+  margin-top: 0.7rem;
 }
-
 
 
 
@@ -105,7 +104,52 @@
 
 /* Customers */
 
+.Menu-page{
+  background-color: #ECECEC;
+  height: 46rem;
+}
 
+.customer-navbar{
+  background-color: #EFCA6C;
+  height: 5.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+}
+
+.El-Callejon-Logo{
+  height: 5em;
+  border-radius: 80px;
+  margin-left: 30px;
+}
+
+.customer-navigations{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+  margin-top: -3.7em;
+  margin-right: 2em;
+}
+
+.Nav-link{
+  text-decoration: none;
+  
+}
+
+
+.link-text{
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+}
+.bell, .User-icon{
+  font-size: 2.1em;
+  margin-top: -10px;
+}
 
 
 

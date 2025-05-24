@@ -11,6 +11,7 @@
 
 .Dashboard-text{
   font-family: Segoe UI;
+  
   margin-left: 12px;
   margin-top: 10px;
 }
@@ -158,14 +159,14 @@
   font-family: Segoe UI;
   padding: 15px;
   margin-top: 0;
-  font-size: 17px;
+  font-size: 1.4rem;
 }
 
 .Best-Selling{
   flex: 1;
   background-color: #ffffff;
   width: 25.4rem;
-  height: 58.6vh;
+  height: 26.6rem;
   border-radius: 7px;
   margin-left: 22px;
   top: 25.3%;
@@ -279,6 +280,64 @@
   color: #007bff;
   font-weight: 500;
 }
+
+/* 
+@media screen and (min-width: 1100px) and (max-width: 1920px) {
+  .whole-page {
+    width: 100vw;
+  }
+
+  .side-bar {
+    width: 7em;
+  }
+
+  .main-content-dashboard {
+    margin-top: 12px;
+    height: 100vh;
+    padding-left: 1.6%;
+    overflow-y: auto;
+  }
+
+  .summary-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .Best-selling-List {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .LineChart {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .whole-page {
+    width: 78.9rem;
+    height: 45.5rem;
+  }
+  .side-bar {
+    width: 7em;
+  }
+
+  .summary-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .Best-selling-List {
+    flex-wrap: wrap;
+  }
+}
+
+*/
+
 
 
 
