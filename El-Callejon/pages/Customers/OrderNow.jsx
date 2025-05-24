@@ -108,32 +108,39 @@ function OrderNow() {
                 </div>
               </div>
             </div>
-        </div>
-        <div className='order-summary'>
-          <div className='order-details'>
-            <div className='alert2'>
-              <p><IoIosAlert className='warning-icon'/>   A minimum order of ₱200 is required 
-                when placing an order.</p>
-            </div>
-            <div className='order-option'>
-              <div className='delivery'><MdDeliveryDining style={{fontSize: '20px', marginLeft: '3px', marginBottom: '2px'}}/> </div>
-              <button className='delivery-btn'>Delivery</button>
-              
-              <div className='delivery'><img style={{height: '17px', marginBottom: '3px', marginLeft: '2px'}} src={pickup} />  </div>
-              <button className='pick-up-btn'> Pick Up</button>
-              
-              <div className='delivery'><img style={{height: '17px', marginBottom: '3px', marginLeft: '2px'}} src={reserve} /> </div>
-              <button className='reservation-btn'> Reservation</button>
-            </div>
           </div>
-          
-          <div className='customer-order-details'>
-            <div className='order-detail-container'>
-              <h2>Your Order</h2>
+
+          <div className='order-summary'>
+            <div className='order-details'>
+              <div className='alert2'>
+                <p><IoIosAlert className='warning-icon'/>   A minimum order of ₱200 is required 
+                  when placing an order.</p>
+              </div>
+              <div className='order-option'>
+                <div className='delivery'><MdDeliveryDining style={{fontSize: '20px', marginLeft: '3px', marginBottom: '2px'}}/> </div>
+                <button className='delivery-btn'>Delivery</button>
+                
+                <div className='delivery'><img style={{height: '17px', marginBottom: '3px', marginLeft: '2px'}} src={pickup} />  </div>
+                <button className='pick-up-btn'> Pick Up</button>
+                
+                <div className='delivery'><img style={{height: '17px', marginBottom: '3px', marginLeft: '2px'}} src={reserve} /> </div>
+                <button className='reservation-btn'> Reservation</button>
+                
+              </div>
+              <div className='customer-order-details'>
+                <div className='order-detail-container'>
+                  <h2>Your Order</h2>
+                  <div className='ordered-details'>
+                    <p>1</p>
+                    <p className='Lomi-text'>Lomi</p>
+                    <p>₱75.00</p>
+                  </div>
+                </div>         
+              </div>
             </div>
+
             
           </div>
-        </div>
         </div>
       </div>
     </>

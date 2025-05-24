@@ -211,7 +211,17 @@
 }
 
 .customer-order-details{
-  display: block;
+ margin-top: 25px;
+}
+
+.ordered-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 25px;
+}
+.Lomi-text{
+  padding-right: 200px;
 }
 
 
