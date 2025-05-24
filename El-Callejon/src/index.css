@@ -106,12 +106,12 @@
 
 .Menu-page{
   background-color: #ECECEC;
-  height: 46rem;
+  height: 100%;
 }
 
 .customer-navbar{
   background-color: #EFCA6C;
-  height: 5.5em;
+  height: 5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -120,7 +120,7 @@
 }
 
 .El-Callejon-Logo{
-  height: 5em;
+  height: 4em;
   border-radius: 80px;
   margin-left: 30px;
 }
@@ -142,13 +142,13 @@
 
 
 .Link-text{
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 400;
   color: #000000;
   font-family: 'Times New Roman', Times, serif;
 }
 .bell, .User-icon{
-  font-size: 2.1em;
+  font-size: 20px;
   margin-top: -10px;
 }
 

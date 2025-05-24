@@ -2,7 +2,9 @@ import {useLocation, Link} from 'react-router-dom'
 import React, { useState } from 'react'
 import logoAdmin from '../assets/El_Calejon.jpg'
 import '../Admin/admin-css/Onlineorder.css'
-import { FaThLarge } from 'react-icons/fa'
+import { FaThLarge, FaCog } from 'react-icons/fa';              
+import { TbLogout2, TbReportSearch } from 'react-icons/tb';   
+import { MdDeliveryDining } from 'react-icons/md'; 
 import Gcash from '../assets/gcash-sample.PNG'
 
 
@@ -136,28 +138,28 @@ function OnlineOrders() {
           <ul className='List'>
             <li className='navigations'>
               <Link to="/Admin-Dashboard"
-              className={`nav ${pathname === '/Admin-Dashboard' ? 'dashboard-active' : ''}`}>
-                <FaThLarge className='nav-icons'/></Link> </li>
-
-            <li className='navigations'>
-              <Link to="/Admin-Reports"
-              className={`nav ${pathname === '/Admin-Reports' ? 'reports-active' : ''}`}>
-                <FaThLarge className='nav-icons' /></Link> </li>
-            
-            <li className='navigations'>
-              <Link to="/Admin-OnlineOrders"
-              className={`nav ${pathname === '/Admin-OnlineOrders' ? 'online-orders-active' : ''}`}>
-                <FaThLarge className='nav-icons'/></Link> </li>
-            
-            <li className='navigations'>
-              <Link to="/Admin-Settings"
-              className={`nav ${pathname === '/Admin-Settings' ? 'settings-active' : ''}`}>
-                <FaThLarge className='nav-icons'/></Link> </li>
-            
-            <hr className='line'/>
-            
-            <Link to="/Admin-Login">
-                <FaThLarge style={{ marginLeft: '-1px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
+                className={`nav ${pathname === '/Admin-Dashboard' ? 'dashboard-active' : ''}`}>
+              <FaThLarge className='nav-icons'/></Link> </li>
+        
+              <li className='navigations'>
+                <Link to="/Admin-Reports"
+                className={`nav ${pathname === '/Admin-Reports' ? 'reports-active' : ''}`}>
+              <TbReportSearch className='nav-icons' /></Link> </li>
+                    
+              <li className='navigations'>
+                <Link to="/Admin-OnlineOrders"
+                className={`nav ${pathname === '/Admin-OnlineOrders' ? 'online-orders-active' : ''}`}>
+                  <MdDeliveryDining className='nav-icons'/></Link> </li>
+              
+              <li className='navigations'>
+                <Link to="/Admin-Settings"
+                className={`nav ${pathname === '/Admin-Settings' ? 'settings-active' : ''}`}>
+                  <FaCog className='nav-icons'/></Link> </li>
+              
+              <hr className='line'/>
+              
+              <Link to="/Admin-Login">
+                <TbLogout2 style={{ marginLeft: '-1px', marginTop: '8px', height: '43px', width: '43px', color: 'black'}} /></Link>
           </ul>
         </div>
 

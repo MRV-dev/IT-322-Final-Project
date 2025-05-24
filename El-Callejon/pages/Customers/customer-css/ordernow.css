@@ -1,3 +1,7 @@
+.Category{
+  display: flex;
+}
+
 .category-list{
   display: flex;
   gap: 40px;
@@ -16,7 +20,9 @@
 }
 
 .category-name{
-  font-size: 21px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family:'Segoe UI';
 }
 
 .Dishes, .bilao, 
@@ -30,26 +36,39 @@
 .dish{
   list-style: none;
 }
+.alert1{
+  background-color: #ffffff;
+  width: 41%;
+  height: 30%;
+  padding-left: 12px;
+  padding-top: 8px;
+  margin-top: 14px;
+  margin-left: 30px;
+  font-weight: 500;
+  border-radius: 5px;
+  font-family: 'Segoe UI';
+}
+.heart-icon{
+  color: rgb(189, 0, 0);
+}
 
 
 
 .order-content {
   display: flex;
-  height: 87vh; 
+  height: 89vh; 
   overflow: hidden;
 }
 .Order-container{
-  flex: 2;
+  flex: 3;
   overflow-y: auto;
-  height: 100vh;
+  height: 100%;
   padding-right: 10px;
-  scrollbar-width: none; 
-  scrollbar-color: #EFCA6C #ffffff
+  scrollbar-width: auto; 
+  scrollbar-color: #EFCA6C #ffffff;
+  
 }
 .Order-container::-webkit-scrollbar {
-  width: 6px;
-}
-.Order-container::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
@@ -58,33 +77,75 @@
 .dishes-list{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding-left: 60px;
+  gap: 1px;
+  padding-left: 50px;
+  font-family:'Segoe UI';
 }
 
 .dish{
   background-color: #fff;
   border-radius: 6px;
-  width: 17em;
-  height: 15em;
+  width: 90%;
+  height: 13.8em;
   padding: 4em;
-  display: flex;
-  justify-content: center;
+  display: flex; 
+  flex-direction: column;
   align-items: center;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 .dish-image{
   height: 130px;
-  position: relative;
-  margin-top: -60px;
+  margin-top: -50px;
 }
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 15px; 
+}
+
+.left-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 6px;
+  margin-right: 110px;
+  margin-left: -40px;
+}
+.dish-price{
+  font-weight: 500;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 7px; 
+  margin-bottom: 10px;
+}
+
+.quantity-btn {
+  background-color: #facc15;
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 
 
 
 .order-summary {
-  width: 478px; 
+  width: 30%; 
   position: sticky;
   margin-top: -1px;
   align-self: flex-start;
@@ -101,5 +162,141 @@
   width: 100%; 
   height: 39.1em;
 }
+
+.alert2{
+  background-color: #fce979;
+  height: 4em;
+  width: 90%;
+  display: block;
+  justify-content: center;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-top: 6px;
+  font-weight: 500;
+}
+.warning-icon{
+  color: rgb(223, 94, 94);
+  margin-left: 1px;
+  margin-bottom: 3px;
+}
+.order-option{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+ 
+
+.delivery-btn, .pick-up-btn,
+.reservation-btn{
+  background-color: #fff;
+  border-radius: 30px;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  width: 23%;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-left: -11px;
+}
+
+.delivery{
+  background-color: #ffffff;
+  border: 2px solid black;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  max-width: 500px;
+  width: 6%;
+}
+
+.customer-order-details{
+  display: block;
+}
+
+
+
+/* For mobile screens below 768px */
+@media screen and (max-width: 768px) {
+  .order-content {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+    padding: 10px;
+  }
+
+  .Category {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .category-link {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+  }
+
+  .alert1 {
+    width: 90%;
+    font-size: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Adjust dishes grid */
+  .dishes-list {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row on small screens */
+    gap: 10px;
+  }
+
+  .dish {
+    width: 100%;
+    padding: 2em;
+    height: auto;
+  }
+
+  .dish-image {
+    height: 100px;
+  }
+
+  .Container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .order-summary {
+    width: 95%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .order-option {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .delivery-btn,
+  .pick-up-btn,
+  .reservation-btn {
+    width: 80%;
+    max-width: 200px;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .delivery {
+    width: 90%;
+    max-width: 180px;
+  }
+}
+
+
 
 
