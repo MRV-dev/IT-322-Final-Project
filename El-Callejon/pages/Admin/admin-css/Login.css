@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to bottom right, #e9c56a, rgba(79, 79, 57, 0.548));
 }
 
 .container {

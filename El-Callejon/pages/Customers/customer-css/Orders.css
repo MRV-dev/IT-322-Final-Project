@@ -1,132 +1,53 @@
-.customer.nav{
+.account-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* NAVBAR  */
+.customer-nav{
   background-color: #EFCA6C;
   height: 6rem;
 }
+
 .Logo{
   height: 80px;
   border-radius: 60px;
-  margin-left: 50px;
-  margin-top: 7px;
+  margin-left: 30px;
+  margin-top: 9px;
 }
 
 .nav-bar {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  margin-left: 73%;
-  margin-top: -55px;
+  margin-left: 75%;
+  margin-top: -50px;
   font-size: 1rem;
   gap: 20px;
-  
 }
 
 .link-text{
   color: black;
   text-decoration: none;
-}
-
-.nav-link {
-  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
 }
 
 .icon-item {
-  margin-top: 8px;
+  margin-top: -3px;
 }
 
-.sidebar {
-  background-color: #f5c544;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-  padding-top: 20px;
-}
 
-.logo-circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 
-.logo-img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.profile-section .profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid white;
-  margin-bottom: 10px;
-}
-
-/* Navigation links */
-.nav-link {
-  color: black;
-  font-weight: 500;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  transition: background 0.2s;
-  cursor: pointer;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  background-color: #e6b800;
-  border-radius: 10px;
-  color: black;
-}
-
-/* Top bar */
-.logo {
-  height: 50px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 16px;
-  margin-left: 20px;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* Icon buttons */
-.icon-circle {
-  width: 35px;
-  height: 35px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-
-.account-wrapper {
+/* SIDEBAR */
+.sidebar-setting {
   display: flex;
   flex: 1;
 }
 
 .sidebar {
-  width: 300px;
-  background-color: #f0f0f0; /* Light gray background */
+  width: 250px;
+  background-color: #ffffff; 
   padding: 30px;
   border-right: 1px solid #ccc;
 }
@@ -137,8 +58,8 @@
 }
 
 .profile-pic img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -160,6 +81,11 @@
   background-color: rgb(255, 255, 255);
 }
 
+.btn.change {
+  color: #4343e7;
+  border-color: #4343e7;
+}
+
 .btn.remove {
   color: red;
   border-color: red;
@@ -173,8 +99,7 @@
 
 .sidebar-menu li {
   padding: 1rem;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -196,24 +121,39 @@
 .menu-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem; 
+  gap: 2rem; 
 }
 
 
-/* Orders section */
-.order{
-  background-color: #f4f4f4;
-  height: 100%;
-  padding: 20px;
+/* MAIN */
+.order-setting {
+  flex: 1;
+  padding: 30px;
+  background-color: #ECECEC;
 }
 
-.table th,
-.table td {
+.order-setting h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #BFBFBF;
   vertical-align: middle;
   text-align: center;
 }
 
 .table th {
+  background-color: #f5f5f5;
   font-weight: bold;
   font-size: 16px;
 }
@@ -323,12 +263,173 @@
   cursor: pointer;
 }
 
-.modal-content .btn-primary {
-  background-color: #f5c544;
-  color: black;
+.order-id-section {
+  margin-bottom: 20px;
 }
 
-.modal-content .btn-secondary {
-  background-color: #ccc;
-  color: black;
+.order-id-section h5 {
+  font-size: 17px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bolder;
+}
+
+.order-id-section p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.order-items-section {
+  margin-bottom: 20px;
+}
+
+.order-items-section h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.order-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-quantity {
+  width: 20px;
+  text-align: center;
+}
+
+.item-name {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.item-price {
+  width: 80px;
+  text-align: right;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 15px 0;
+}
+
+.delivery-info {
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+.delivery-info h5 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.delivery-date,
+.delivery-time {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.modal-content {
+  width: 450px; 
+  padding: 25px;
+}
+
+.modal-content h4 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.order-info h5 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.delivery-details {
+  display: grid;
+  gap: 10px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.detail-label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+}
+
+.detail-value {
+  flex: 1;
+  color: #333;
+  font-size: 14px;
+  margin-left:50%;
+}
+
+.detail-address {
+  flex: 1;
+  color: #333;
+  font-size: 14px;
+  margin-left:39%;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #EFCA6C;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #e0b84d;
+}
+
+.close-btn {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #e0e0e0;
 }
