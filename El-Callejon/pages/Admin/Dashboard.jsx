@@ -22,14 +22,13 @@ import {
 
 const data = [
   { name: 'Mon', sales: 400 },
-  { name: 'Tue', sales: 300 },
-  { name: 'Wed', sales: 500 },
+  { name: 'Tue', sales: 500 },
+  { name: 'Wed', sales: 460 },
   { name: 'Thu', sales: 700 },
-  { name: 'Fri', sales: 600 },
-  { name: 'Sat', sales: 800 },
-  { name: 'Sun', sales: 750 },
-];  
-
+  { name: 'Fri', forecast: 780 },
+  { name: 'Sat', forecast: 900 },
+  { name: 'Sun', forecast: 1000 },
+];
 
 
 function Dashboard() {
@@ -108,19 +107,21 @@ function Dashboard() {
                     </div>
                   </div>
 
-                  <div className='LineChart' style={{ width: 'auto', height: '20rem', marginTop: '10px' }}>
+                <div className='LineChart' style={{ width: 'auto', height: '20rem', marginTop: '10px' }}>
                     <ResponsiveContainer>
                       <LineChart data={data} margin={{ top: 50, right: 30, left: 0, bottom: 0 }}>
-                        {/* <CartesianGrid strokeDasharray="0" /> */}
                         <XAxis dataKey="name" />
                         <YAxis />
                         <Tooltip />
+                        {/* Actual Sales */}
                         <Line type="Linear" dataKey="sales" stroke="#007bff" strokeWidth={2.4} />
+
+                        {/* Forecasted Sales */}
+                        <Line type="monotone" dataKey="forecast" stroke="#ff7300" strokeDasharray="5 5" strokeWidth={2.4} />
                       </LineChart>
                     </ResponsiveContainer>
                   </div>
                 </div>
-                
                 <div className='right-side'>
                   <div className='Best-Selling'>
                     <h6 className='best-selling-text'>Best Selling</h6>

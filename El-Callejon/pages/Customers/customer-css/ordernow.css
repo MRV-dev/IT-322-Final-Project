@@ -5,6 +5,7 @@
 .category-list{
   display: flex;
   gap: 40px;
+  padding-left: 46px;
 }
 
 .category-link{
@@ -18,6 +19,10 @@
   margin-top: 13px;
   text-align: center;
 }
+
+
+
+
 
 .category-name{
   font-size: 20px;
@@ -37,16 +42,23 @@
   list-style: none;
 }
 .alert1{
-  background-color: #ffffff;
-  width: 41%;
-  height: 30%;
+  background-color: transparent;
+  width: 90%;
+  height: 9%;
   padding-left: 12px;
-  padding-top: 8px;
+  padding-top: 16px;
   margin-top: 14px;
   margin-left: 30px;
   font-weight: 500;
   border-radius: 5px;
-  font-family: 'Segoe UI';
+}
+.alert-note{
+  font-size: 20px;
+  margin-left: -7px;
+  
+}
+.note{
+  font-weight: bold;
 }
 .heart-icon{
   color: rgb(189, 0, 0);
@@ -79,17 +91,18 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   padding-left: 50px;
-  font-family:'Segoe UI';
+  font-family: Segoe UI;
 }
 
 .dish{
   background-color: #fff;
   border-radius: 6px;
-  width: 90%;
+  width: 84.5%;
   height: 13.8em;
   padding: 4em;
   display: flex; 
   flex-direction: column;
+  margin-right: -10px;
   align-items: center;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -97,6 +110,7 @@
 .dish-image{
   height: 130px;
   margin-top: -50px;
+  border-radius: 100px;
 }
 .Container {
   width: 100%;
@@ -120,7 +134,7 @@
 .quantity {
   display: flex;
   align-items: center;
-  gap: 7px; 
+  gap: 3px; 
   margin-bottom: 10px;
 }
 
@@ -140,6 +154,34 @@
 }
 
 
+.quantity[data-name="Lomi"] .minus-btn {
+  margin-left: 6px;
+}
+
+
+.quantity[data-name="SweetandSpicy"] .minus-btn {
+  margin-left: -48px;
+}
+
+.quantity[data-name="Pancit"] .minus-btn {
+  margin-left: 1px;
+}
+
+.quantity[data-name="Bihon"] .minus-btn {
+  margin-left: 7px;
+}
+
+.quantity[data-name="Hotsilog"] .minus-btn {
+  margin-left: -6px;
+}
+
+.quantity[data-name="Siomaisilog"] .minus-btn {
+  margin-left: -26px;
+}
+
+.quantity[data-name="Siomairice"] .minus-btn {
+ margin-left: -15px;
+}
 
 
 
@@ -153,15 +195,19 @@
   border: 1px solid #ccc;
   max-height: 90vh;
   overflow: hidden;
-  margin-right: 3em; 
+  margin-right: 2em; 
   padding: 10px;
 }
 
 .order-details {
   background-color: #ffffff;
   width: 100%; 
-  height: 39.1em;
+  height: 40.1em;
+  
 }
+/* .order-detail-container{
+
+} */
 
 .alert2{
   background-color: #fce979;
@@ -182,8 +228,13 @@
 .order-option{
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 16px;
   justify-content: center;
+}
+
+.order-text{
+  font-size: 25px;
+  font-weight: 700;
 }
  
 
@@ -200,7 +251,7 @@
   margin-left: -11px;
 }
 
-.delivery{
+.delivery, .Pickup, .Reservation{
   background-color: #ffffff;
   border: 2px solid black;
   border-radius: 20px;
@@ -209,41 +260,112 @@
   max-width: 500px;
   width: 6%;
 }
-
+.order-detail-container{
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  scrollbar-color: #EFCA6C #ffffff
+}
 .customer-order-details{
- margin-top: 25px;
+  margin-top: 25px;
+  height: 47vh;
 }
 
 .ordered-details{
+  margin-left: 25px;
+  margin-top: 16px;
+  font-size: 1.3em;
+  font-weight: 500;
+  width: 87%;
+ 
+}
+.order-list{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-left: 25px;
 }
+
 .Lomi-text{
-  padding-right: 200px;
+  padding-right: 100px;
 }
+.order-price{
+  margin-right: 40px;
+}
+
+.total{
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 30px;
+}
+.total-text{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 63.1px;
+}
+.upper-line{
+  margin-left: 12px;
+  max-width: 410px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+.price-line{
+  max-width: 500px;
+  width: 100%;
+  margin-left: -18px;
+}
+.checkout{
+  display: flex;
+  justify-content: center
+}
+.checkout-btn{
+  margin-top: -6px;
+  background-color: #FFCB52;
+  margin-right: 10px;
+  width: 80%;
+  border: none;
+  font-weight: 700;
+  padding: 4px;
+  border-radius: 4px;
+}
+
 
 
 
 /* For mobile screens below 768px */
 @media screen and (max-width: 768px) {
+  /* Adjusts the main container */
   .order-content {
     flex-direction: column;
     height: auto;
-    overflow: visible;
     padding: 10px;
   }
 
+  /* Navigation adjustments */
+  .customer-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .customer-navigations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* Fix category layout */
   .Category {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .category-list {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
   }
 
   .category-link {
@@ -252,38 +374,48 @@
     height: auto;
   }
 
-  .alert1 {
-    width: 90%;
-    font-size: 0.9rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Adjust dishes grid */
+  /* Improve dish grid display */
   .dishes-list {
-    grid-template-columns: repeat(2, 1fr); /* Two items per row on small screens */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
 
   .dish {
-    width: 100%;
-    padding: 2em;
-    height: auto;
+    width: 45%;
+    text-align: center;
+    padding: 10px;
   }
 
+  /* Make images scale correctly */
   .dish-image {
     height: 100px;
+    width: 100px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 
-  .Container {
-    flex-direction: column;
-    align-items: center;
+  /* Ensure quantity buttons are user-friendly */
+  .quantity {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 
+  .quantity-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  /* Order summary adjustments */
   .order-summary {
     width: 95%;
-    max-width: 400px;
+    max-width: 420px;
     margin: 20px auto;
+    padding: 10px;
   }
 
   .order-option {
@@ -295,15 +427,32 @@
   .delivery-btn,
   .pick-up-btn,
   .reservation-btn {
-    width: 80%;
-    max-width: 200px;
+    width: 90%;
     font-size: 1rem;
     padding: 12px;
   }
+}
 
-  .delivery {
-    width: 90%;
-    max-width: 180px;
+/* Extra small screens (below 600px) */
+@media screen and (max-width: 600px) {
+  .dishes-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dish {
+    width: 100%;
+  }
+
+  .dish-image {
+    height: 80px;
+    width: 80px;
+  }
+
+  .quantity-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 }
 
