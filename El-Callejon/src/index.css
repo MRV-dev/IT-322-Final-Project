@@ -131,7 +131,7 @@
   list-style: none;
   gap: 30px;
   align-items: center;
-  margin-top: -3.7em;
+  margin-top: 1em;
   margin-right: 2em;
 }
 
@@ -141,16 +141,16 @@
 }
 
 
-.link-text{
-  font-size: 28px;
+.Link-text{
+  font-size: 25px;
   font-weight: 400;
+  color: #000000;
   font-family: 'Times New Roman', Times, serif;
 }
 .bell, .User-icon{
   font-size: 2.1em;
   margin-top: -10px;
 }
-
 
 
 

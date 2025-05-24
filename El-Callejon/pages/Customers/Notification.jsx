@@ -1,13 +1,9 @@
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/El_Calejon.jpg';
 import '../Customers/customer-css/Notification.css';
 import { FaBell, FaUser, FaTrash } from 'react-icons/fa';
 import { useState } from 'react';
-import { Link, } from 'react-router-dom';
-import Logo from '../assets/El_Calejon.jpg'
-import '../Customers/customer-css/Notification.css'
-import { FaBell, FaUser} from 'react-icons/fa';
 
 
 function Notification() {
@@ -52,7 +48,7 @@ function Notification() {
   ]);
 
   const handleClearAll = () => {
-    setNotifications([]); // This clears all notifications
+    setNotifications([]); 
   };
 
   const handleMarkAllAsRead = () => {
