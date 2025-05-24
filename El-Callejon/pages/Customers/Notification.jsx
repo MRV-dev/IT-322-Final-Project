@@ -1,11 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, } from 'react-router-dom';
 import Logo from '../assets/El_Calejon.jpg'
 import '../Customers/customer-css/Notification.css'
 import { FaBell, FaUser} from 'react-icons/fa';
 
 function Notification() {
-  const location = useLocation();
-  const pathname = location.pathname;
 
   return (
  <div className="Account">

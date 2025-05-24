@@ -86,21 +86,10 @@
   }
   
   
-  .eye-icon1 {
+  .customer-eye-icon {
     position: absolute;
     right: 50px;
-    top: 17%;
-    left: 86%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    cursor: pointer;
-    color: #888;
-  }
-  
-  .eye-icon2 {
-    position: absolute;
-    right: 50px;
-    top: 67%;
+    top: 68%;
     left: 86%;
     transform: translateY(-50%);
     font-size: 24px;
@@ -140,13 +129,13 @@
   }
   
   .account-register{
-    color: #EFCA6C;
+    color: #eab701;
     text-decoration: none;
-
+    font-weight: 600;
   }
   .customer-register {
   position: absolute;
-  margin-left: 45px;
+  margin-left: 10px;
   margin-top: 410px;
   }
 
@@ -189,18 +178,6 @@
   position: relative;
   width: 90%;
   max-width: 500px;
-}
-
-
-.eye-icon {
-  position: absolute;
-  right: 50px;
-  top: 37%;
-  left: 86%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  cursor: pointer;
-  color: #888;
 }
 
 

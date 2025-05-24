@@ -1,14 +1,13 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/El_Calejon.jpg'
 import '../Customers/customer-css/landingpage.css'
-import { FaBell, FaUser, FaLock, FaClock, FaClipboardList, FaSignOutAlt } from 'react-icons/fa';
+import dish from '../assets/Corned_Beef_Lomi_Batangas_Style-removebg-preview 1.png'
+import { FaBell, FaUser } from 'react-icons/fa';
 
 function LandingPage() {
-  const location = useLocation();
-  const pathname = location.pathname;
 
   return (
- <div className="Account">
+      <div className="Account">
         <div className="customer-nav">
           <img className='Logo' src={Logo} alt="Logo" />
           <ul className='nav-bar'>
@@ -38,7 +37,7 @@ function LandingPage() {
         </div>
 
         <div className="hero-image">
-          <img src="/lomi-bowl.png" alt="Lomi Bowl" />
+          <img className='dish-landingpage' src={dish} />
         </div>
       </section>
     </div>
