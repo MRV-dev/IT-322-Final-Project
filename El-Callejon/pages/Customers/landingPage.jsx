@@ -7,7 +7,7 @@ import { FaBell, FaUser } from 'react-icons/fa';
 function LandingPage() {
 
   return (
-      <div className="Account">
+      <div className="account-container">
         <div className="customer-nav">
           <img className='Logo' src={Logo} alt="Logo" />
           <ul className='nav-bar'>

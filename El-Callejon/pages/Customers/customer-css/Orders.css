@@ -433,3 +433,16 @@
 .close-btn:hover {
   background-color: #e0e0e0;
 }
+
+/* ... (Your existing CSS remains unchanged) ... */
+
+.track-order-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.track-order-content div {
+  margin-bottom: 10px; /* Added margin between steps */
+}

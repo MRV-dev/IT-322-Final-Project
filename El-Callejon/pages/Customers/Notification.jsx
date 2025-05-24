@@ -1,13 +1,9 @@
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/El_Calejon.jpg';
 import '../Customers/customer-css/Notification.css';
 import { FaBell, FaUser, FaTrash } from 'react-icons/fa';
 import { useState } from 'react';
-import { Link, } from 'react-router-dom';
-import Logo from '../assets/El_Calejon.jpg'
-import '../Customers/customer-css/Notification.css'
-import { FaBell, FaUser} from 'react-icons/fa';
 
 
 function Notification() {
@@ -15,44 +11,69 @@ function Notification() {
   const [notifications, setNotifications] = useState([
     {
       id: 1,
-      message: "Your order 00227 is in process! You may now come to our shop.",
-      date: "30m.",
+      message: "Your order 00227 has been confirmed.",
+      date: "45m..",
       isNew: true
     },
     {
       id: 2,
-      message: "Your order 00227 has been confirmed.",
-      date: "35m.",
+      message: "Your order 00227 has been placed.",
+      date: "50m.",
       isNew: true
     },
-    {
+      {
       id: 3,
-      message: "Your order 00227 has been placed.",
-      date: "2025-04-25",
+      message: "Your Order 00142 have been completed.",
+      date: "2025-04-17",
       isNew: false
     },
     {
       id: 4,
-      message: "Your order 00113 has been completed.",
-      date: "2025-04-15",
+      message: "Your order 00142 is in process. You may now come to our shop!",
+      date: "2025-04-25.",
       isNew: false
     },
     {
       id: 5,
-      message: "Your order 00113 has been confirmed.",
-      date: "2025-04-15",
+      message: "Your Order 00142 has been confirmed.",
+      date: "2025-05-25",
       isNew: false
     },
     {
       id: 6,
-      message: "Your order 00113 has been placed.",
+      message: "Your Order 00142 has been placed.",
+      date: "2025-04-25",
+      isNew: false
+    },
+    {
+      id: 7,
+      message: "Your Order 00111 have been completed.",
+      date: "2025-04-17",
+      isNew: false
+    },
+    {
+      id: 8,
+      message: "Your Order 00111 is in process. You may now come to our shop!",
+      date: "2025-04-17",
+      isNew: false
+    },
+    {
+      id: 9,
+      message: "Your Order 00111 has been confirmed.",
+      date: "2025-04-15",
+      isNew: false
+    },
+    {
+      id: 10,
+      message: "Your Order 00111 has been placed.",
       date: "2025-04-15",
       isNew: false
     }
+
   ]);
 
   const handleClearAll = () => {
-    setNotifications([]); // This clears all notifications
+    setNotifications([]); 
   };
 
   const handleMarkAllAsRead = () => {
