@@ -1,6 +1,6 @@
 import '../Admin/admin-css/POS.css'
 import Logo from '../assets/El_Calejon.jpg'
-import {useLocation, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { MdDeliveryDining } from 'react-icons/md'; 
 import { FaBowlFood } from "react-icons/fa6";
 import { useState, useRef } from 'react';
@@ -69,7 +69,7 @@ function POS() {
 
             <li className='navs'><Link style={{textDecoration: 'none', color: 'black'}}><MdDeliveryDining style={{marginBottom: '3px'}}/>Orders Online</Link></li>
             
-            <li className='logout'><Link style={{textDecoration: 'none', color: 'black'}}>Logout</Link></li>
+            <li className='logout'><Link to='/POS-login' style={{textDecoration: 'none', color: 'black'}}>Logout</Link></li>
 
           </ul>
         </div>

@@ -25,7 +25,7 @@ function Login(){
               <input className="password" type={showPassword ? "text" : 'password'} placeholder="Enter Password"/>
               <span onClick={togglePasswordVisibility} className="eye-icon">{showPassword ? <FaEyeSlash/> : <FaEye/>}</span>
             </div>
-            <Link to="/Customers-CustomerLogin" className="nav-to-customer">Customer</Link> 
+            <Link to="/POS-login" className="nav-to-customer">POS</Link> 
             <Link to="/Admin-Dashboard" className="link"><button className="btn-Login" >Log In</button></Link> 
           </div>    
         </div>

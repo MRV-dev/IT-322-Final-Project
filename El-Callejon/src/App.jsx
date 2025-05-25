@@ -5,6 +5,7 @@ import Reports from '../pages/Admin/Reports.jsx'
 import OnlineOrders from '../pages/Admin/OnlineOrders.jsx'
 import Settings from '../pages/Admin/settings.jsx'
 import POS from '../pages/Admin/POS.jsx'
+import POSlogin from '../pages/Admin/POS-Login.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomerLogin from '../pages/Customers/CustomerLogin.jsx'
 import CustomerSignup from '../pages/Customers/CustomerSignup.jsx';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/Admin-OnlineOrders" element={<OnlineOrders/>} />
           <Route path="/Admin-Settings" element={<Settings/>} />
           <Route path="/Admin-POS" element={<POS/>} />
+          <Route path="/POS-login" element={<POSlogin/>} />
 
 
           {/* Customer */}
