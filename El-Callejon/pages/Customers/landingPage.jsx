@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Logo from '../assets/El_Calejon.jpg'
-import '../Customers/customer-css/landingpage.css'
+import '../Customers/customer-css/landingPage.css'
 import { FaBell, FaUser } from 'react-icons/fa';
 
 function LandingPage() {
