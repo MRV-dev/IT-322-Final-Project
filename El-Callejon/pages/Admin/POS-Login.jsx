@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import '../Admin/admin-css/POS-Login.css'
+import '../Admin/admin-css/POS-login.css'
 import Logo from '../assets/El_Calejon.jpg'
 
 function Login(){
