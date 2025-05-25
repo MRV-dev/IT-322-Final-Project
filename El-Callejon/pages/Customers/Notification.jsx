@@ -51,12 +51,7 @@ function Notification() {
     setNotifications([]); 
   };
 
-  const handleMarkAllAsRead = () => {
-    setNotifications(notifications.map(notification => ({
-      ...notification,
-      isNew: false
-    })));
-  };
+  
 
   return (
     <div className="account-container">

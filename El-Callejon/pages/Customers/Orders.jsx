@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { jsPDF } from "jspdf";
 import Logo from '../assets/El_Calejon.jpg'
-import Profile from '../assets/Profile.jpg'
+import Profile from '../assets/profile.jpg'
 import '../Customers/customer-css/Orders.css';
 import { FaUser, FaLock, FaClock, FaClipboardList, FaSignOutAlt, FaBell, FaEye, FaFileAlt, FaTimes, FaCamera, FaTrash } from 'react-icons/fa';
 
@@ -228,7 +228,7 @@ const handleDownloadOrder = () => {
       <div className="sidebar-setting">
         <aside className="sidebar">
           <div className="profile-pic">
-            <img className="Profile" src={Profile} alt="Profile" />
+            <img className="Profile" src={Profile} />
             <div className="photo-buttons">
               <label className="btn change" htmlFor="photoUpload">
                 <FaCamera style={{ marginRight: '5px' }} /> Change Photo
