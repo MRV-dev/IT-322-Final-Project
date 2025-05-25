@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import Logo from '../assets/El_Calejon.jpg';
-import Profile from '../assets/Profile.jpg';
+import Profile from '../assets/profile.jpg';
 import '../Customers/customer-css/Account.css';
 import { FaBell, FaUser, FaLock, FaClock, FaClipboardList, FaSignOutAlt, FaCamera, FaTrash } from 'react-icons/fa';
 
