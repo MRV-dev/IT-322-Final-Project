@@ -19,7 +19,7 @@ function Login(){
         </div>
         <div className="Admin-Login">
           <div className="container">
-            <h2 className='Login-Text'>LomiHub</h2>
+            <h2 className='Login-Text'>LomiHubssss</h2>
             <input className="username" type="text" placeholder="Username"/>
             <div className="password-wrapper">
               <input className="password" type={showPassword ? "text" : 'password'} placeholder="Enter Password"/>
