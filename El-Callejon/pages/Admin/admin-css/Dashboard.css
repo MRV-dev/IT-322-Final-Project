@@ -66,7 +66,6 @@
   margin-top: 15px;
   margin-left: 15px;
   font-size: 1.1em;
-  font-family: 'Segoe UI';
   color: #0077FF;
 }
 .new-order-text{
@@ -155,7 +154,6 @@
 
 
 .best-selling-text{
-  font-family: Segoe UI;
   padding: 15px;
   margin-top: 0;
   font-size: 1.4rem;
@@ -187,7 +185,6 @@
   flex-direction: row;
   align-items: center;
   padding-top: 20px;
-  font-family: Segoe UI;
 }
 
 .Lomi, .Palabok, .Tapsilog, .Bihon{

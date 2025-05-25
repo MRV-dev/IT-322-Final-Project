@@ -1,0 +1,243 @@
+.pos-page{
+  display: flex;
+  height: 100vh;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #ecebeb;
+}
+
+
+.sideBar{
+  background-color: #EFCA6C;
+  height: 100vh;
+  width: 14%;
+  display: flex;
+  flex-direction: column;
+}
+
+.business-logo{
+  height: 7em;
+  width: 7rem;
+  margin-top: 18px;
+  margin-left: 45px;
+  border-radius: 100%;
+}
+
+.navigation-links{
+  margin-top: 5em;
+  margin-left: -12px;
+  width: 250px;
+}
+
+.navs, .logout{
+  list-style: none;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 20px;
+  
+}
+.logout{
+  display: flex;
+  margin-left: 30px;
+  margin-top: 300px;
+}
+.navs:hover{
+  background-color: #ffffff;
+  padding-left: 10px;
+  margin-right: 40px;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.POS-content{
+  margin-left: -25px;
+  max-width: 1340px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.POS-container{
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 10px;
+  scrollbar-width: auto; 
+  scrollbar-color: #EFCA6C #ffffff;
+  display: block;
+}
+
+
+/* .searchbar{
+  margin-top: 30px;
+  height: 40px;
+  width:54%;
+  margin-bottom: -30px;
+  margin-left: 40px;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+} */
+
+
+.category-text{
+  margin-top: 20px;
+  margin-bottom: -4px;
+  margin-left: 40px;
+}
+
+
+
+
+.summary{
+  background-color: #ffffff;
+  height: 100vh;
+  max-width: 100%;
+  width: 25%;
+  margin-right: 10px;
+}
+
+.summary-order-container{
+  height: 45vh;
+  overflow-y: auto;
+  scrollbar-width: none; 
+  scrollbar-color: #EFCA6C #ffffff
+}
+.summary-order-details{
+  margin-top: 25px;
+  height: 47vh;
+}
+
+.summary-ordered-items{
+  margin-left: 25px;
+  margin-top: 16px;
+  font-size: 1.3em;
+  font-weight: 500;
+  width: 87%;
+ 
+}
+.summary-order-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Lomi-text{
+  padding-right: 100px;
+}
+.summary-order-price{
+  margin-right: 40px;
+}
+
+.summary-total{
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+
+.online-order-alert{
+  background-color: #FFFD9A;
+  height: 60px;
+  margin-left: 10px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
+}
+.alert-text{
+  font-size: 16px;
+  font-weight: 700;
+  padding: 17px;
+  padding-left: 20px;
+
+}
+.Bell{
+  height: 20px;
+  margin-top: -1px;
+}
+
+
+
+
+
+.summary-order-title{
+  font-size: 25px;
+  margin-left: 10px;
+}
+.summary-total-text{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 60.1px;
+}
+.summary-divider{
+  margin-left: 12px;
+  max-width: 273px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+.summary-total-line{
+  max-width: 500px;
+  width: 100%;
+  margin-left: -18px;
+}
+.summary-checkout{
+  display: flex;
+  justify-content: center
+}
+.summary-checkout-btn{
+  margin-top: 10px;
+  background-color: #FFCB52;
+  margin-right: 10px;
+  width: 90%;
+  border: none;
+  font-weight: 700;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.quantity[data-name="Lomi"] .minus-btn {
+  margin-left: 6px;
+}
+
+
+.quantity[data-name="SweetandSpicy"] .minus-btn {
+  margin-left: -48px;
+}
+
+.quantity[data-name="Pancit"] .minus-btn {
+  margin-left: 1px;
+}
+
+.quantity[data-name="Bihon"] .minus-btn {
+  margin-left: 7px;
+}
+
+.quantity[data-name="Hotsilog"] .minus-btn {
+  margin-left: -6px;
+}
+
+.quantity[data-name="Siomaisilog"] .minus-btn {
+  margin-left: -26px;
+}
+
+.quantity[data-name="Siomairice"] .minus-btn {
+ margin-left: -15px;
+}
+
+
+
+
+

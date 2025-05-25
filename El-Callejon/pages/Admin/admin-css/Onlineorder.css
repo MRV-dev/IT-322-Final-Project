@@ -213,6 +213,12 @@
 
 
 /* order details */
+
+.details{
+  
+  width: 70%; 
+  
+}
 .order-summarized{
   display: flex;
   justify-content: space-between;
@@ -263,17 +269,34 @@
   border-radius: 30px;
   height: 30px;
   width: 180px;
+  
 }
-.gcash{
-  height: 25em;
-}
-
-.left{
+.left {
   flex: 1;
 }
-.right{
+
+.right {
   flex-shrink: 0; 
+  display: flex;
+  justify-content: flex-end; 
 }
+
+.gcash {
+  height: 25em;
+  max-width: 100%; 
+  position: absolute;
+  margin-top: -200px;
+  margin-right: 6px;
+}
+
+
+.order-food-summary {
+  display: flex;
+ 
+  align-items: center; 
+  width: 100%;
+}
+
 
 
 

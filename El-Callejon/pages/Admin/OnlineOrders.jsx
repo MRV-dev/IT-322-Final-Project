@@ -245,13 +245,13 @@ function OnlineOrders() {
                     <div className="view-order-modal-content">
                       <h3 className='order-detail-text'>Order Details</h3>
                       <a onClick={closeOrderModal} className="close-order-detail">&times;</a>
-                      <div className='order-summary'>
+                      <div className='order-food-summary'>
                         <div className='left'>
-                          <div className='dish-details'>
+                          <div className='details'>
                               {orderdetails.map((orderdetails) => (
                                 <div className='Ordered-dish'>
                                   <p className='quantity'>{orderdetails.quantity}</p>
-                                  <p className='dish'>{orderdetails.dish}</p>
+                                  <p className='food'>{orderdetails.dish}</p>
                                   <p className='price'>{orderdetails.price}</p>
                                 </div>
                               ))}
