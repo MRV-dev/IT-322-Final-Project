@@ -5,6 +5,7 @@
 }
 
 /* Admin */
+
 .main-content-reports {
   padding: 20px;
   height: calc(100vh - 75px);
@@ -131,4 +132,261 @@
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid #e0e0e0;
+}
+
+@media screen and (min-width: 1920px) and (max-width: 768px) {
+  .whole-page {
+    width: 100vw;
+  }
+
+  .side-bar {
+    width: 7em;
+  }
+
+  .main-content-dashboard {
+    margin-top: 12px;
+    height: 100vh;
+    padding-left: 1.6%;
+    overflow-y: auto;
+  }
+
+  .summary-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .Best-selling-List {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .LineChart {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-controls-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-group-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  width: 150px;
+}
+
+.filter-select {
+  min-width: 80px;
+
+}
+
+.filter-group-item label {
+  font-weight: normal;
+  color: #333;
+  white-space: nowrap;
+}
+
+.search-section,
+.search-fields {
+    display: none;
+}
+
+.graphs-modal-container {
+  background-color: white;
+  border-radius: 8px;
+  width: 95%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-out;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.graphs-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  border-bottom: none;
+  background-color: transparent;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.graphs-modal-header .close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #333;
+  transition: color 0.2s;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1001;
+}
+
+.graphs-modal-header .close-btn:hover {
+  color: #555;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.graphs-modal-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.graph-content-wrapper {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.graph-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.graph-header-controls h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.month-selector,
+.year-time-range-selectors {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.year-time-range-selectors {
+  margin-left: auto;
+  gap: 15px;
+}
+
+.month-selector label,
+.year-time-range-selectors label {
+  font-weight: normal;
+  color: #555;
+}
+
+.month-selector select,
+.year-time-range-selectors select {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 80px;
+}
+
+.switch-view-btn {
+  padding: 10px 16px;
+  background-color: #fcd34d;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid #e0b900;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.switch-view-btn:hover {
+  background-color: #e0b900;
+  transform: translateY(-1px);
+}
+.switch-view-btn:active {
+  transform: translateY(0);
+}
+
+.graph-visualization {
+  width: 100%;
+  height: 350px;
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.recharts-legend-wrapper {
+  margin-bottom: 10px !important;
+  text-align: left !important;
+  padding-left: 10px;
+}
+
+.recharts-legend-item {
+  margin-bottom: 5px;
+}
+
+.recharts-legend-item-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.graph-footer {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media screen and (max-width: 768px) {
+  .whole-page {
+    width: 78.9rem;
+    height: 45.5rem;
+  }
+  .side-bar {
+    width: 7em;
+  }
+
+  .summary-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .Best-selling-List {
+    flex-wrap: wrap;
+  }
 }

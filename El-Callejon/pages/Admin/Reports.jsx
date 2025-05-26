@@ -1,25 +1,28 @@
 import { useLocation, Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import logoAdmin from '../assets/El_Calejon.jpg';
-import '../Admin/admin-css/reports.css'; 
-import { FaThLarge, FaTimes, FaBars, FaUtensils, FaClipboardList, FaCog, FaSignOutAlt, FaSearch } from 'react-icons/fa'; 
+import '../Admin/admin-css/reports.css'
+import { TbLogout2, TbReportSearch } from 'react-icons/tb';   
+import { MdDeliveryDining } from 'react-icons/md'; 
+import { FaThLarge, FaTimes, FaBars, FaUtensils, FaClipboardList, FaCog, FaSignOutAlt, FaSearch } from 'react-icons/fa';
 import { PieChart, Pie, BarChart, Bar, XAxis, YAxis, CartesianGrid, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
 function Reports() {
   const { pathname } = useLocation();
   const [showGraphsModal, setShowGraphsModal] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState('April');
+  const [selectedYear, setSelectedYear] = useState('2024');
+  const [selectedTimeRange, setSelectedTimeRange] = useState('Jan-Dec');
   const [currentView, setCurrentView] = useState('topSelling');
-  const [searchText, setSearchText] = useState(''); 
-  const [selectedOrderType, setSelectedOrderType] = useState('All'); 
-  const [selectedDateFilter, setSelectedDateFilter] = useState('April'); 
+  const [searchText, setSearchText] = useState('');
+  const [selectedOrderType, setSelectedOrderType] = useState('All');
+  const [selectedDateFilter, setSelectedDateFilter] = useState('April');
 
-  
   const topSellingData = [
-    { name: 'Spaghetti', value: 400 },
-    { name: 'Palabok', value: 300 },
-    { name: 'Lomi', value: 200 },
-    { name: 'Sisig & Spicy', value: 100 }
+    { name: 'Lomi', value: 200, color: '#FF5722' },
+    { name: 'Spaghetti', value: 400, color: '#FFC107' },
+    { name: 'Palabok', value: 300, color: '#00D1B2' },
+    { name: 'Sweet & Spicy', value: 100, color: '#7B68EE' }
   ];
 
   const monthlySalesData = [
@@ -36,17 +39,16 @@ function Reports() {
     { name: 'Nov', sales: 1900 },
     { name: 'Dec', sales: 1600 }
   ];
-
-  const COLORS = ['#4CAF50', '#FFC107', '#FF5722', '#9C27B0'];
+  const PIE_COLORS = ['#FF5722', '#FFC107', '#00D1B2', '#7B68EE'];
 
   const orders = [
     {
       id: '00112',
       date: '2025-04-10',
-      customer: 'Juan Dela Cruz', 
+      customer: 'Juan Dela Cruz',
       type: 'Online',
-      items: 'Palabok (L) x1', 
-      amount: '₱220', 
+      items: 'Palabok (L) x1',
+      amount: '₱220',
       payment: 'GCash',
       status: 'Completed',
     },
@@ -56,11 +58,10 @@ function Reports() {
       customer: '',
       type: 'Walk-in',
       items: 'Lomi x2',
-      amount: '₱180', 
-      payment: '',
+      amount: '₱180',
+      payment: 'Cash',
       status: 'Completed',
     },
- 
   ];
 
   const handleSwitchView = () => {
@@ -76,65 +77,90 @@ function Reports() {
     return (
       <div className="graphs-modal-overlay">
         <div className="graphs-modal-container">
-          <div className="graphs-modal-header">
-            <h2>
-              {currentView === 'topSelling' && 'Top Selling Items'}
-              {currentView === 'monthlySales' && 'Monthly Sales'}
-            </h2>
-            <button className="close-btn" onClick={() => setShowGraphsModal(false)}>
-              <FaTimes />
-            </button>
-          </div>
+          <button className="close-btn" onClick={() => setShowGraphsModal(false)}>
+            <FaTimes />
+          </button>
 
-          <div className="graphs-modal-body">
-            <button className="switch-view-btn" onClick={handleSwitchView}>Switch View</button>
+          <button className="switch-view-btn" onClick={handleSwitchView}>Switch View</button>
 
-            <div className="month-selector">
-              <label>Month:</label>
-              <select
-                value={selectedMonth}
-                onChange={(e) => setSelectedMonth(e.target.value)}
-              >
-                <option>January</option>
-                <option>February</option>
-                <option>March</option>
-                <option>April</option>
-                <option>May</option>
-                <option>June</option>
-                <option>July</option>
-                <option>August</option>
-                <option>September</option>
-                <option>October</option>
-                <option>November</option>
-                <option>December</option>
-              </select>
+          <div className="graph-content-wrapper">
+            <div className="graph-header-controls">
+              <h2>
+                {currentView === 'topSelling' && 'Top-Selling Items'}
+                {currentView === 'monthlySales' && 'Monthly Sales'}
+              </h2>
+
+              {currentView === 'topSelling' && (
+                <div className="month-selector">
+                  <label>Month:</label>
+                  <select
+                    value={selectedMonth}
+                    onChange={(e) => setSelectedMonth(e.target.value)}
+                  >
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                  </select>
+                </div>
+              )}
+
+              {currentView === 'monthlySales' && (
+                <div className="year-time-range-selectors">
+                  <label>Select Year</label>
+                  <select
+                    value={selectedYear}
+                    onChange={(e) => setSelectedYear(e.target.value)}
+                  >
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                  <label>Time Range</label>
+                  <select
+                    value={selectedTimeRange}
+                    onChange={(e) => setSelectedTimeRange(e.target.value)}
+                  >
+                    <option value="Jan-Dec">Jan-Dec</option>
+                    <option value="Jan-Jun">Jan-Jun</option>
+                    <option value="Jul-Dec">Jul-Dec</option>
+                  </select>
+                </div>
+              )}
             </div>
 
             <div className="graph-visualization">
               {currentView === 'topSelling' && (
-                <ResponsiveContainer width="100%" height={300}>
+                <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
                       data={topSellingData}
                       cx="50%"
                       cy="50%"
-                      outerRadius={80}
+                      outerRadius={100}
+                      innerRadius={70}
                       fill="#8884d8"
                       dataKey="value"
-                      label
-                    >
+                      labelLine={false}>
                       {topSellingData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        <Cell key={`cell-${index}`} fill={PIE_COLORS[index % PIE_COLORS.length]} />
                       ))}
                     </Pie>
                     <Tooltip />
-                    <Legend />
+                    <Legend layout="vertical" verticalAlign="middle" align="left" wrapperStyle={{ paddingLeft: '20px' }} />
                   </PieChart>
                 </ResponsiveContainer>
               )}
 
               {currentView === 'monthlySales' && (
-                <ResponsiveContainer width="100%" height={300}>
+                <ResponsiveContainer width="100%" height="100%">
                   <BarChart
                     data={monthlySalesData}
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -144,13 +170,11 @@ function Reports() {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="sales" fill="#4CAF50" name="Sales (₱)" /> {/* Changed to ₱ */}
+                    <Bar dataKey="sales" fill="#4CAF50" name="Sales (₱)" />
                   </BarChart>
                 </ResponsiveContainer>
               )}
             </div>
-
-            <p className="graph-footer">Showing data for {selectedMonth} 2025</p>
           </div>
         </div>
       </div>
@@ -160,112 +184,109 @@ function Reports() {
   return(
     <>
       <div className="whole-page">
-  
+
         <div className="side-bar">
           <img className="Logo-Dashboard" src={logoAdmin} alt="El Calejon Logo" />
           <ul className='List'>
-         
             <li className='navigations'>
               <Link to="/Admin-Dashboard"
               className={`nav ${pathname === '/Admin-Dashboard' ? 'dashboard-active' : ''}`}>
                 <FaThLarge className='nav-icons'/></Link>
             </li>
 
-        
             <li className='navigations'>
               <Link to="/Admin-Reports"
               className={`nav ${pathname === '/Admin-Reports' ? 'reports-active' : ''}`}>
-                <TbReportSearch className='nav-icons' /> 
+                <TbReportSearch className='nav-icons' />
               </Link>
             </li>
 
-           
             <li className='navigations'>
               <Link to="/Admin-OnlineOrders"
               className={`nav ${pathname === '/Admin-OnlineOrders' ? 'online-orders-active' : ''}`}>
-                <MdDeliveryDining className='nav-icons'/> 
+                <MdDeliveryDining className='nav-icons'/>
               </Link>
             </li>
 
-            
             <li className='navigations'>
               <Link to="/Admin-Settings"
               className={`nav ${pathname === '/Admin-Settings' ? 'settings-active' : ''}`}>
                 <FaCog className='nav-icons'/></Link>
             </li>
 
-            <hr className='line'/> 
+            <hr className='line'/>
 
-     
-            <Link to="/Admin-Login" className="logout-nav-item"> 
-                <TbLogout2 className="nav-icons" />
+            <Link to="/Admin-Login" className="logout-nav-item">
+                <TbLogout2 style={{MarginLeft: '-70px'}} className="nav-icons" />
             </Link>
           </ul>
         </div>
 
-      
+          
         <div className='part'>
           <div className='nav-section'>
             <div className="navbar">
-              <h1 className='Dashboard-text'><FaClipboardList style={{ marginTop: '-9px', marginRight: '10px', height: '43px', width: '43px', }} />Reports</h1> 
+              <h1 className='Dashboard-text'><FaClipboardList style={{ marginTop: '-9px', marginRight: '10px', height: '43px', width: '43px', }} />Reports</h1>
             </div>
           </div>
 
-       
           <div className="main-content-reports">
             <div className="overview-container-reports">
               <div className="filters">
-              
                 <button
                   className="view-graphs-btn"
-                  onClick={() => setShowGraphsModal(true)}
-                >
-                  View Graphs
-                </button>
+                  onClick={() => setShowGraphsModal(true)}>View Graphs</button>
 
-                <div className="search-and-filters-container"> 
-                  <div className="search-section">
-                    <strong>Search:</strong>
+                <div className="filter-controls-container">
+                  <div className="filter-group-item">
+                    <label>Search:</label>
                     <input
                       type="text"
-                      className="search-input"
+                      className="filter-input search-input"
                       placeholder=""
                       value={searchText}
                       onChange={(e) => setSearchText(e.target.value)}
                     />
                   </div>
 
-                  <div className="date-and-order-type-filters"> 
-                    <div className="filter-group">
-                      <label>Date:</label>
-                      <select
-                        className="filter-select"
-                        value={selectedDateFilter}
-                        onChange={(e) => setSelectedDateFilter(e.target.value)}
-                      >
-                        <option>April</option>
-                        <option>May</option>
-                       
-                      </select>
-                    </div>
+                  <div className="filter-group-item">
+                    <label>Date:</label>
+                    <select
+                      className="filter-select"
+                      value={selectedDateFilter}
+                      onChange={(e) => setSelectedDateFilter(e.target.value)}
+                    >
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
+                  </div>
 
-                    <div className="filter-group">
-                      <label>Order Type:</label>
-                      <select
-                        className="filter-select"
-                        value={selectedOrderType}
-                        onChange={(e) => setSelectedOrderType(e.target.value)}
-                      >
-                        <option>All</option>
-                        <option>Online</option>
-                        <option>Walk-in</option>
-                      </select>
-                    </div>
+                  <div className="filter-group-item">
+                    <label>Order Type:</label>
+                    <select
+                      className="filter-select"
+                      value={selectedOrderType}
+                      onChange={(e) => setSelectedOrderType(e.target.value)}
+                    >
+                      <option>All</option>
+                      <option>Online</option>
+                      <option>Walk-in</option>
+                    </select>
                   </div>
                 </div>
+
               </div>
 
-       
               <div className="reports-table-container">
                 <div className="table-responsive">
                   <table className="reports-table">
@@ -286,11 +307,11 @@ function Reports() {
                         <tr key={index}>
                           <td>{order.id}</td>
                           <td>{order.date}</td>
-                          <td>{order.customer || ''}</td> 
+                          <td>{order.customer || ''}</td>
                           <td>{order.type}</td>
                           <td>{order.items}</td>
                           <td>{order.amount}</td>
-                          <td>{order.payment || ''}</td> 
+                          <td>{order.payment || ''}</td>
                           <td className={`status-${order.status.toLowerCase()}`}>{order.status}</td>
                         </tr>
                       ))}
@@ -302,7 +323,6 @@ function Reports() {
           </div>
         </div>
 
-      
         {renderGraphsModal()}
       </div>
     </>

@@ -125,3 +125,86 @@
   border: none;
   margin-top: 20px;
 }
+
+
+
+/* Responsive Login Page */
+@media (max-width: 1024px) {
+  .Admin-Login {
+    width: 90%;
+    padding: 5%;
+  }
+
+  .username,
+  .password,
+  .btn-Login {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .eye-icon {
+    right: 30px;
+    left: auto;
+  }
+
+  .nav-to-customer {
+    padding-left: 0;
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Login-Text {
+    font-size: 32px;
+  }
+
+  .admin-logo {
+    height: 100px;
+    margin-top: 1em;
+  }
+
+  .username,
+  .password {
+    font-size: 18px;
+    height: 50px;
+  }
+
+  .btn-Login {
+    font-size: 20px;
+    height: 45px;
+  }
+
+  .eye-icon {
+    font-size: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Login-Text {
+    font-size: 26px;
+  }
+
+  .admin-logo {
+    height: 80px;
+  }
+
+  .username,
+  .password {
+    font-size: 16px;
+    height: 45px;
+    width: 4px;
+  }
+
+  .btn-Login {
+    font-size: 18px;
+    height: 40px;
+  }
+
+  .eye-icon {
+    font-size: 18px;
+    right: 15px;
+  }
+}

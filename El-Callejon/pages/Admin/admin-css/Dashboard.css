@@ -285,3 +285,108 @@
 
 
 
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .outer-box {
+    width: 100%;
+  }
+
+  .Best-Selling-dash {
+    width: 200%;
+    margin-left: 0;
+  }
+
+  .summary-cards {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .total-sales-today,
+  .total-orders-today,
+  .Revenue {
+    width: 100%;
+  }
+
+  .dashboard-top-section {
+    flex-direction: column;
+  }
+
+  .LineChart {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dashboard-table{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .overview-container {
+    height: auto;
+    padding: 16px;
+  }
+
+  .summary-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .Best-Selling-dash {
+    height: auto;
+  }
+
+  .Sold-items img {
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .notif-position {
+    width: 100%;
+  }
+
+  .outer-box {
+    width: 60%;
+  }
+
+  .Dashboard-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .dashboard-top-section {
+    gap: 16px;
+  }
+
+  .summary-cards {
+    flex-direction: column;
+  }
+
+  .total-sales-today,
+  .total-orders-today,
+  .Revenue {
+    width: 100%;
+  }
+
+  .Best-Selling-dash,
+  .LineChart{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dashboard-table{
+    width: 90%;
+  }
+
+  .Sold-items {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Dish-name1, .Dish-name2, .Dish-name3, .Dish-name4 {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}

@@ -240,4 +240,124 @@
 
 
 
+@media (max-width: 1024px) {
+  .pos-page {
+    flex-direction: column;
+    height: auto;
+  }
+  .sideBar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+  }
+  .business-logo {
+    margin-left: 0;
+    margin-top: 10px;
+    height: 6em; 
+    width: 6rem;
+  }
+  .navigation-links {
+    width: auto;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .navs, .logout {
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  
+  .POS-content {
+    margin-left: 0;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .POS-container {
+    height: auto;
+    padding-right: 0;
+    overflow-y: auto;
+  }
+  
+  .summary {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    padding: 10px;
+  }
+  
+  .summary-order-container,
+  .summary-order-details {
+    height: auto;
+    overflow-y: visible;
+  }
+}
 
+@media (max-width: 768px) {
+  .pos-page {
+    flex-direction: column;
+    height: auto;
+  }
+  .sideBar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+  }
+  
+  .business-logo {
+    height: 5em;
+    width: 5rem;
+    margin-left: 0;
+  }
+  
+  .navigation-links {
+    margin-left: 0;
+  }
+  
+  .navs, .logout {
+    font-size: 14px;
+    line-height: 36px;
+    padding-left: 8px;
+  }
+  
+  .POS-content {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  
+  .POS-container {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  .summary {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 1rem;
+    height: auto;
+  }
+  
+
+  .dishes-list {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+  }
+  
+  .dish {
+    width: 95%;
+    padding: 1.5em;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .Container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+}

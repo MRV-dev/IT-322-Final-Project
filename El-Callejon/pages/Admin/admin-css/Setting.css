@@ -94,3 +94,67 @@
   object-fit: cover;
   border-radius: 5px;
 }
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .switchd {
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 12px;
+  }
+
+  .Manage, .info {
+    width: 100%;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .add-new-menu {
+    flex-direction: column;
+  }
+
+  .options input,
+  .options select {
+    width: 100%;
+  }
+
+  .menu-table th,
+  .menu-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .menu-table td img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .settings-text {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .config {
+    height: auto;
+    padding: 10px;
+  }
+
+  .options button {
+    font-size: 16px;
+  }
+
+  .menu-table {
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+  }
+}
