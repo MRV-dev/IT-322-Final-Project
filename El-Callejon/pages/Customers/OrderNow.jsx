@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { FaBell, FaUser, FaHeart } from 'react-icons/fa'
 import { IoIosAlert } from "react-icons/io";
 import { MdDeliveryDining } from 'react-icons/md'; 
+import { CiShoppingCart } from "react-icons/ci";
 import pickup from '../assets/take-away.png'
 import Lomi from '../assets/Lomi.png'
 import Dessert from '../assets/Dessert.png'
@@ -50,6 +51,7 @@ const updateQuantity = (index, change) => {
   }, 100);
 };
 
+const [showSummary, setShowSummary] = useState(false);
 
 
 const [isModalOpen, setIsModalOpen] = useState(false);
@@ -95,6 +97,10 @@ const [isOrderPlaced, setIsOrderPlaced] = useState(false);
               <div className='alert1'>
                 <p className='alert-note'><span className='note'>Note: &nbsp;</span>All online orders are final and cannot be canceled. 
                 Thank you for understanding! <FaHeart className='heart-icon'/></p>
+                <button className="toggle-summary-btn" onClick={() => setShowSummary(!showSummary)}>
+  {showSummary ? <CiShoppingCart className='cart'/> : <CiShoppingCart className='cart'/>}
+</button>
+
               </div>
             <div className='Category'>
               <ul className='category-list'>
@@ -165,7 +171,7 @@ const [isOrderPlaced, setIsOrderPlaced] = useState(false);
             </div>
           </div>
 
-          <div className='order-summary' ref={orderSummaryRef}>
+          <div  className={`order-summary ${showSummary ? 'show' : ''}`}  ref={orderSummaryRef}>
             <div className='order-details'>
               <div className='alert2'>
                 <p><IoIosAlert className='warning-icon'/>   A minimum order of ₱200 is required 

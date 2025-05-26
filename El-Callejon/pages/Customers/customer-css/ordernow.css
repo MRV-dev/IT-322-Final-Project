@@ -25,6 +25,33 @@
 }
 
 
+/* Hide toggle on desktop */
+.toggle-summary-btn {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 15px;
+  z-index: 999;
+  padding: 10px 15px;
+  background-color: #f9b925;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Always visible and positioned normally on wider screens */
+.order-summary {
+  position: relative;
+  left: 0;
+  width: 30%;
+  background-color: #fff;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+
 
 
 
@@ -795,4 +822,39 @@
   }
 
 
+   .toggle-summary-btn {
+    display: block;
+    margin-left: -50px;
+    margin-top: 70px;
+    height: 10%;
+  }
+
+  .order-text{
+    margin-left: 40px;
+  }
+
+  .order-summary {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 90%;
+    background-color: #fff;
+    z-index: 998;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 2px;
+  }
+
+  .order-summary.show {
+    left: 0;
+
+  }
+
+  .cart{
+    height: 40px;
+    width: 60px;
+    padding-left: 20px;
+  }
 }
