@@ -1,7 +1,7 @@
 /* LOGIN STYLE */
 .signup-page{
     background-color: #ECECEC;
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;

@@ -14,12 +14,9 @@ function Orders() {
   const location = useLocation();
   const pathname = location.pathname;
 
-  const orders = [
-    { id: '00230', method: 'Pickup', status: 'Pending' },
+ const orders = [
     { id: '00227', method: 'Delivery', status: 'Confirmed' },
-    { id: '00219', method: 'Reservation', status: 'Confirmed ' },
   ];
-
   const orderDetails = {
     '00230': {
       items: [

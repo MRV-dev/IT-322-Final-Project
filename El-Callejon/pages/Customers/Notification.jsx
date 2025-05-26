@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function Notification() {
 
-  const [notifications, setNotifications] = useState([
+ const [notifications, setNotifications] = useState([
     {
       id: 1,
       message: "Your order 00227 is in process! You may now come to our shop.",
@@ -21,7 +21,7 @@ function Notification() {
       date: "35m.",
       isNew: true
     },
-    {
+      {
       id: 3,
       message: "Your order 00227 has been placed.",
       date: "2025-04-25",
@@ -36,15 +36,40 @@ function Notification() {
     {
       id: 5,
       message: "Your order 00113 has been confirmed.",
-      date: "2025-04-15",
+      date: "2025-04-15",      
       isNew: false
     },
     {
       id: 6,
       message: "Your order 00113 has been placed.",
+      date: "2025-04-25",
+      isNew: false
+    },
+    {
+      id: 7,
+      message: "Your Order 00111 have been completed.",
+      date: "2025-04-17",
+      isNew: false
+    },
+    {
+      id: 8,
+      message: "Your Order 00111 is in process. You may now come to our shop!",
+      date: "2025-04-17",
+      isNew: false
+    },
+    {
+      id: 9,
+      message: "Your Order 00111 has been confirmed.",
+      date: "2025-04-15",
+      isNew: false
+    },
+    {
+      id: 10,
+      message: "Your Order 00111 has been placed.",
       date: "2025-04-15",
       isNew: false
     }
+
   ]);
 
   const handleClearAll = () => {
@@ -58,15 +83,15 @@ function Notification() {
       <nav className='customer-navbar'>
         <img className='El-Callejon-Logo' src={Logo} />
           <ul className='customer-navigations'>
-            <li><Link className='Nav-link' to='/Home'>
+            <li><Link className='Nav-link' to='/Customers-LandingPage'>
               <span className='Link-text'>Home</span></Link>
             </li>
             
-            <li><Link className='Nav-link' to='/OrderNow'>
+            <li><Link className='Nav-link' to='/Customers-OrderNow'>
               <span className='Link-text'>Order Now</span></Link>
             </li>
             
-            <li><Link className='Nav-link' to='/Contact'>
+            <li><Link className='Nav-link' to='/Customers-LandingPage'>
               <span className='Link-text'>Contact Us</span></Link>
             </li>
             

@@ -64,15 +64,15 @@ const [isOrderPlaced, setIsOrderPlaced] = useState(false);
         <nav className='customer-navbar'>
           <img className='El-Callejon-Logo' src={Logo} />
           <ul className='customer-navigations'>
-            <li><Link className='Nav-link' to='/Home'>
+            <li><Link className='Nav-link' to='/Customers-LandingPage'>
               <span className='Link-text'>Home</span></Link>
             </li>
 
-            <li><Link className='Nav-link' to='/OrderNow'>
+            <li><Link className='Nav-link' to='/Customers-OrderNow'>
               <span className='Link-text'>Order Now</span></Link>
             </li>
 
-            <li><Link className='Nav-link' to='/Contact'>
+            <li><Link className='Nav-link' to='/Customers-LandingPage'>
               <span className='Link-text'>Contact Us</span></Link>
             </li>
 
