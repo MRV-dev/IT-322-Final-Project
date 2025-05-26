@@ -175,7 +175,7 @@ function Reports() {
             <li className='navigations'>
               <Link to="/Admin-Reports"
               className={`nav ${pathname === '/Admin-Reports' ? 'reports-active' : ''}`}>
-                <FaClipboardList className='nav-icons' /> 
+                <TbReportSearch className='nav-icons' /> 
               </Link>
             </li>
 
@@ -183,7 +183,7 @@ function Reports() {
             <li className='navigations'>
               <Link to="/Admin-OnlineOrders"
               className={`nav ${pathname === '/Admin-OnlineOrders' ? 'online-orders-active' : ''}`}>
-                <FaUtensils className='nav-icons'/> 
+                <MdDeliveryDining className='nav-icons'/> 
               </Link>
             </li>
 
@@ -198,7 +198,7 @@ function Reports() {
 
      
             <Link to="/Admin-Login" className="logout-nav-item"> 
-                <FaSignOutAlt className="nav-icons" />
+                <TbLogout2 className="nav-icons" />
             </Link>
           </ul>
         </div>
