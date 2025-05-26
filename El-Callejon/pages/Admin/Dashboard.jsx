@@ -123,8 +123,8 @@ function Dashboard() {
                   </div>
                 </div>
                 <div className='right-side'>
-                  <div className='Best-Selling'>
-                    <h6 className='best-selling-text'>Best Selling</h6>
+                  <div className='Best-Selling-dash'>
+                    <h6 className='best-selling-text-dash'>Best Selling</h6>
                     <div className='Best-selling-List'> 
                       <div className='Sold-items'>
                         <img className='Lomi' src={Lomi}/>
