@@ -10,6 +10,7 @@ import Lomi from '../assets/Lomi.png'
 import Dessert from '../assets/Dessert.png'
 import Bilao from '../assets/Pancit_Canton_Bihon_Guisado-removebg-preview 1.png'
 import reserve from '../assets/booking.png'
+import QR from '../assets/QR.png'
 import Siomaisilog from '../assets/siomai_silog.png'
 import Siomairice from '../assets/Siomai_rice.png'
 import Tapsilog from '../assets/Tapsilog2.png'
@@ -31,13 +32,8 @@ const initialDishes = [
   { name: 'Siomairice', price: 75, image: Siomairice, quantity: 0 },
 ];
 
-
-
-
 const orderSummaryRef = useRef(null);
-
 const [Dishes, setDishes] = useState(initialDishes);
-
 
 
 const updateQuantity = (index, change) => {
@@ -54,6 +50,10 @@ const updateQuantity = (index, change) => {
   }, 100);
 };
 
+
+
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [isOrderPlaced, setIsOrderPlaced] = useState(false);
 
 
   return (
@@ -210,12 +210,104 @@ const updateQuantity = (index, change) => {
                 </div>
 
                 <div className='checkout'>
-                  <button className='checkout-btn'>Checkout</button>
+                  <button className='checkout-btn' onClick={() => setIsModalOpen(true)} >Checkout</button>
                 </div>
               </div>
-            </div>
+              {isModalOpen && (
+                <div className="place-order-modal-overlay">
+                  <div className="place-order-modal-content">
+                    <div className='placeorder'>
+                      <div className='title'>
+                        <div className='delivery-type'><MdDeliveryDining size={28} className='delivery-icon' style={{fontSize: '20px', marginLeft: '3px', marginBottom: '2px'}}/>
+                        <p className='delivery-text'>Delivery</p></div>
+                        <button className='closemodal' onClick={() => setIsModalOpen(false)}>×</button>
+                      </div>
+                      <div className='placeorder-details'>
+                        <div className='placeorder-info'>
+                          <p className='fullname'>Full name</p>
+                          <input className='entername' type="text" placeholder='Enter full name' />
+                        </div>
+                        <div className='alignment'>
+                          <div className='placeorder-number'>
+                            <p className='PhoneNumber'>Phone Number</p>
+                            <input className='Phone' type="text" placeholder='Enter phone number' />
+                          </div>
+                          <div className='placeorder-address'>
+                            <p className='location'>Address</p>
+                            <input className='Address' type="text" placeholder='Enter address' />
+                          </div>
+                        </div>
+                        <div>
+                          <p className='delivery-time'>Time to deliver</p>
+                          <input className='deliver' type="text"/>
+                        </div>
+                        <div className='payment-container'>
+                          <div className='payment'>
+                            <div className='Gcash-payment'>
+                              <p className='Payment-text'>Payment</p>
+                              <div className='QR-payment'>
+                                <p>Scan QR to pay in Gcash</p>
+                                <img className='QR-sample' src={QR} />
+                              </div>
+                            </div>  
+                          </div>
 
-            
+                          <div className='upload'>
+                            <p>Upload Proof of Payment</p>
+                              <div className="file-upload">
+                                <label htmlFor="fileInput" className="upload-box">
+                                  <input
+                                    type="file"
+                                    id="fileInput"
+                                    style={{ display: "none" }}
+                                    accept="image/*"
+                                    onChange={(e) => {
+                                      const file = e.target.files[0];
+                                      console.log("Selected file:", file);
+                                    }}
+                                  />
+                                  <p className="upload-instruction">Drag a file here or click to select one</p>
+                                  <p className="upload-subtext">
+                                    Attach receipt or transaction screenshot for the confirmation. <br />
+                                    File should not exceed 10mb.
+                                  </p>
+                                </label>
+                              </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <div>
+                      <button  className='PlacedOrder' onClick={() => {setIsModalOpen(false); 
+                      setIsOrderPlaced(true);    
+                              }}
+                            >
+                              Place Order
+                            </button>
+                    </div>            
+                  </div>
+                </div>
+              )}
+              {isOrderPlaced && (
+                <div className="order-confirmation-overlay">
+                  <div className="order-confirmation-modal">
+                    <h2>Order Placed!</h2>
+                    <p>Your order has been successfully submitted.</p>
+                    <div className="order-buttons">
+                      <button className="view-order">View Your Order</button>
+                      <button
+                        className="exit-modal"
+                        onClick={() => setIsOrderPlaced(false)}
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+            </div>
           </div>
         </div>
       </div>
